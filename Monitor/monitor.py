@@ -120,9 +120,16 @@ class Monitor(Thread):
         cpu_name =cpuinfo.get_cpu_info()['brand_raw']
         nb_cpu = self.count_cpus()
         gpu_name = None
-        for i in range(self.num_gpus):
-            gpu_handle = pynvml.nvmlDeviceGetHandleByIndex(i)
-            gpu_name = pynvml.nvmlDeviceGetName(gpu_handle)
+        try :
+            for i in range(self.num_gpus):
+                gpu_handle = pynvml.nvmlDeviceGetHandleByIndex(i)
+                gpu_name = pynvml.nvmlDeviceGetName(gpu_handle)
+        except pynvml.NVMLError_FunctionNotFound:
+            # La fonction n'est pas trouvée, la carte graphique Nvidia n'est pas disponible
+                pass
+        except pynvml.NVMLError as e:
+                # Une autre erreur liée à pynvml s'est produite
+                pass      
         average_ram = self.total_ram/self.count
         cpu_usage = self.total_cpu/self.count/100
         gpu_usage = self.total_gpu/self.count/100
@@ -131,7 +138,7 @@ class Monitor(Thread):
         fichier = open("co2/"+self.dossier+"/GreenAlgorithm_emissions.txt", "w")
         if GA is not None :
             fichier.write("This file is the most precise\n")
-            fichier.write("Stats :\n{} g de co2.\n{} kWh".format(GA[0], GA[1]))
+            fichier.write("Stats :\n{} g de co2.\n{} kWh\n".format(GA[0], GA[1]))
             self.fichier_total_GA(GA[0], GA[1])
         else :
             #On écrit les output à mettre à la main dans GreenAlgorithm ici. C'est la mesure la plus précise que l'on puisse avoir.
@@ -202,8 +209,8 @@ class Monitor(Thread):
         chemin_fichier_total = "co2/total.csv"
         if not os.path.exists(chemin_fichier_total):
             # Si le fichier n'existe pas, créer un DataFrame avec les colonnes "emissions" et "total_energy"
-            df_total = pd.DataFrame(columns=["emissions (kg)", "total_energy (kWh)"])
-            df_total.loc[0] = [0, 0]  # Ajouter une première ligne avec des valeurs initiales à zéro
+            df_total = pd.DataFrame(columns=["total emissions (kg)", "total energy (kWh)", "last_run emissions (kg)", "last_run energy (kWh)"])
+            df_total.loc[0] = [0, 0, 0, 0]  # Ajouter une première ligne avec des valeurs initiales à zéro
         else:
             # Sinon, charger le contenu existant
             df_total = pd.read_csv(chemin_fichier_total)
@@ -218,8 +225,10 @@ class Monitor(Thread):
         valeur_energy_consumed = df_source["energy_consumed"].values[0]
 
         # Ajouter les valeurs aux valeurs existantes dans les colonnes "emissions" et "total_energy" du fichier "total.csv"
-        df_total.loc[0, "emissions (kg)"] += valeur_emissions
-        df_total.loc[0, "total_energy (kWh)"] += valeur_energy_consumed
+        df_total.loc[0, "total emissions (kg)"] += valeur_emissions
+        df_total.loc[0, "total energy (kWh)"] += valeur_energy_consumed
+        df_total.loc[0, "last_run emissions (kg)"] = valeur_emissions
+        df_total.loc[0, "last_run energy (kWh)"] = valeur_energy_consumed
 
         # Enregistrer le résultat dans le fichier "total.csv"
         df_total.to_csv(chemin_fichier_total, index=False)
@@ -230,15 +239,17 @@ class Monitor(Thread):
         chemin_fichier_total = "co2/total.csv"
         if not os.path.exists(chemin_fichier_total):
             # Si le fichier n'existe pas, créer un DataFrame avec les colonnes "emissions" et "total_energy"
-            df_total = pd.DataFrame(columns=["emissions (kg)", "total_energy (kWh)"])
-            df_total.loc[0] = [0, 0]  # Ajouter une première ligne avec des valeurs initiales à zéro
+            df_total = pd.DataFrame(columns=["total emissions (kg)", "total energy (kWh)", "last_run emissions (kg)", "last_run energy (kWh)"])
+            df_total.loc[0] = [0, 0, 0, 0]  # Ajouter une première ligne avec des valeurs initiales à zéro
         else:
             # Sinon, charger le contenu existant
             df_total = pd.read_csv(chemin_fichier_total)
 
         # Ajouter les valeurs aux valeurs existantes dans les colonnes "emissions" et "total_energy" du fichier "total.csv"
-        df_total.loc[0, "emissions (kg)"] += valeur_emissions/1000
-        df_total.loc[0, "total_energy (kWh)"] += valeur_energy_consumed/1000
+        df_total.loc[0, "total emissions (kg)"] += valeur_emissions/1000
+        df_total.loc[0, "total energy (kWh)"] += valeur_energy_consumed/1000
+        df_total.loc[0, "last_run emissions (kg)"] = valeur_emissions/1000
+        df_total.loc[0, "last_run energy (kWh)"] = valeur_energy_consumed/1000
 
         # Enregistrer le résultat dans le fichier "total.csv"
         df_total.to_csv(chemin_fichier_total, index=False)
