@@ -22,7 +22,7 @@ warnings.filterwarnings("ignore")
 
 
 class Monitor(Thread):
-    global total_cpu, count, cpu_now, total_gpu, gpu_now,  tracker_codecarbon, tracker_eco2ai, tracker_carbontracker, total_time, start_time, total_ram,num_gpus, pid, dossier, carbon, carboncount
+    global total_cpu, count, cpu_now, total_gpu, gpu_now,  tracker_codecarbon, tracker_eco2ai, tracker_carbontracker, total_time, start_time, total_ram,num_gpus, pid, dossier, carbon, carboncount, new_time
 
     def __init__(self, delay):
         super(Monitor, self).__init__()
@@ -40,8 +40,9 @@ class Monitor(Thread):
         self.total_ram = 0
         self.carboncount = 0
         self.carbon = 0
+        self.new_time = datetime.now()
         #sous dossier :
-        self.dossier = datetime.now().strftime("%Y.%m.%d_%H:%M:%S")
+        self.dossier = self.new_time.strftime("%Y.%m.%d_%H:%M:%S")
         if (not(os.path.exists("co2/"+self.dossier))):
             os.mkdir("co2/"+self.dossier)
         #Lancement de CodeCarbon
@@ -76,6 +77,7 @@ class Monitor(Thread):
 
     def run(self):
         time.sleep(10)
+        current_user = psutil.Process().username()
         while not self.stopped:
             #Ici, on cherche l'usage factor du GPU. Donc on lance prend la mesure toutes les 10s et on prendra ensuite la moyenne.
             self.gpu_now = 0
@@ -86,7 +88,12 @@ class Monitor(Thread):
                     process_info = pynvml.nvmlDeviceGetComputeRunningProcesses(handle)
                     # Vérifier si le PID correspond
                     for info in process_info:
-                        if info.pid == self.pid:
+                        try :
+                            user_name = psutil.Process(info.pid).username()
+                        except psutil.NoSuchProcess:
+                            user_name = None
+                            # Si le processus n'existe plus, il peut être ignoré
+                        if user_name == current_user:
                             self.gpu_now = pynvml.nvmlDeviceGetUtilizationRates(handle).gpu
                             break
             except pynvml.NVMLError_FunctionNotFound:
@@ -95,28 +102,35 @@ class Monitor(Thread):
             except pynvml.NVMLError as e:
                 # Une autre erreur liée à pynvml s'est produite
                 pass
-            if (self.count%(3600/self.delay)==0):
-                try :
-                    self.carbon += self.carbonIntensity()
-                except Exception :
-                    self.carbon += self.get_value_for_data("France")
-                self.carboncount += 1 
             self.total_gpu += self.gpu_now
             #Pareil, mais usage factor du CPU
-            cpu_usage = psutil.cpu_percent(interval=None, percpu=False)
-            self.total_ram += psutil.virtual_memory().used/(1024**3)
-            self.total_cpu +=  cpu_usage
+            user_processes = [p.info for p in psutil.process_iter(['pid', 'username', 'cpu_percent']) if p.info['username'] == current_user]
+            cpu_total = sum(p['cpu_percent'] for p in user_processes)
+            cpu_cores = psutil.cpu_count(logical=True)
+            cpu_usage = cpu_total / cpu_cores if cpu_cores > 0 else 0
+            self.total_cpu += cpu_usage
+            self.total_ram += psutil.Process(self.pid).memory_info().rss / (1024 ** 3)
             self.count += 1
+            if (self.count%(23.5*3600/self.delay)==0):
+                try :
+                    self.new_time = datetime.now()
+                    self.carbonIntensity_day(self.new_time)
+                except Exception :
+                    self.carbon += self.get_value_for_data("France")*48
+                    self.carboncount += 48 
             time.sleep(self.delay)
+        
 
     def stop(self):
         #On stoppe tous les trackers
         self.stopped = True
+        self.carbonIntensity_date(self.new_time)
+        self.total_time = (time.time() - self.start_time)/60
         self.tracker_eco2ai.stop()
         #self.tracker_carbontracker.epoch_end()
         #self.tracker_carbontracker.stop()
         self.tracker_codecarbon.stop()
-        self.total_time = (time.time() - self.start_time)/60 #En minutes
+        #En minutes
         cpu_name =cpuinfo.get_cpu_info()['brand_raw']
         nb_cpu = self.count_cpus()
         gpu_name = None
@@ -124,42 +138,48 @@ class Monitor(Thread):
             for i in range(self.num_gpus):
                 gpu_handle = pynvml.nvmlDeviceGetHandleByIndex(i)
                 gpu_name = pynvml.nvmlDeviceGetName(gpu_handle)
+                if isinstance(gpu_name, bytes):
+                    gpu_name = gpu_name.decode('utf-8')
         except pynvml.NVMLError_FunctionNotFound:
             # La fonction n'est pas trouvée, la carte graphique Nvidia n'est pas disponible
                 pass
         except pynvml.NVMLError as e:
                 # Une autre erreur liée à pynvml s'est produite
-                pass      
-        average_ram = self.total_ram/self.count
-        cpu_usage = self.total_cpu/self.count/100
-        gpu_usage = self.total_gpu/self.count/100
-        GA = self.GreenAlgo(self.total_time, cpu_name, nb_cpu, gpu_name, self.num_gpus, average_ram, cpu_usage, gpu_usage)
-        
-        fichier = open("co2/"+self.dossier+"/GreenAlgorithm_emissions.txt", "w")
-        if GA is not None :
-            fichier.write("This file is the most precise\n")
-            fichier.write("Stats :\n{} g de co2.\n{} kWh\n".format(GA[0], GA[1]))
-            self.fichier_total_GA(GA[0], GA[1])
+                pass 
+        if (self.count!=0):     
+            average_ram = self.total_ram/self.count
+            cpu_usage = self.total_cpu/self.count/100
+            gpu_usage = self.total_gpu/self.count/100
+            GA = self.GreenAlgo(self.total_time, cpu_name, nb_cpu, gpu_name, self.num_gpus, average_ram, cpu_usage, gpu_usage)
+            
+            fichier = open("co2/"+self.dossier+"/GreenAlgorithm_emissions.txt", "w")
+            if GA is not None :
+                fichier.write("This file is the most precise\n")
+                fichier.write("Stats :\n{} g de co2.\n{} kWh\n".format(GA[0], GA[1]))
+                self.fichier_total_GA(GA[0], GA[1])
+            #else :
+                #On écrit les output à mettre à la main dans GreenAlgorithm ici. C'est la mesure la plus précise que l'on puisse avoir.
+                fichier.write("If you want more precise and efficient stats, enter your data in the csv file.")
+                fichier.write("Stats for GreenAlgorithm: http://calculator.green-algorithms.org/\n")
+                fichier.write("Run time: {} minutes\n".format(self.total_time))
+                fichier.write("Type of cores: Both\n")
+                fichier.write("CPUs:\n")
+                fichier.write("Number of cores: {}\n".format(nb_cpu))
+                fichier.write("Model: {}\n".format(cpu_name))
+                fichier.write("GPUs:\n")
+                fichier.write("Number of GPUs: {}\n".format(self.num_gpus))
+                for i in range(self.num_gpus):
+                    gpu_handle = pynvml.nvmlDeviceGetHandleByIndex(i)
+                    gpu_name = pynvml.nvmlDeviceGetName(gpu_handle)
+                    fichier.write("GPU {}: {}\n".format(i+1, gpu_name))
+                fichier.write("Mémoire RAM moyenne utilisée: {} Go\n".format(average_ram))
+                fichier.write("The CPU usage factor is: {}\n".format(cpu_usage))
+                fichier.write("The GPU usage factor is: {}\n".format(gpu_usage))
+                self.fichier_total()
+            fichier.close()
+            return True
         else :
-            #On écrit les output à mettre à la main dans GreenAlgorithm ici. C'est la mesure la plus précise que l'on puisse avoir.
-            fichier.write("If you want more precise and efficient stats, enter your data in the csv file.")
-            fichier.write("Stats for GreenAlgorithm: http://calculator.green-algorithms.org/\n")
-            fichier.write("Run time: {} minutes\n".format(self.total_time))
-            fichier.write("Type of cores: Both\n")
-            fichier.write("CPUs:\n")
-            fichier.write("Number of cores: {}\n".format(nb_cpu))
-            fichier.write("Model: {}\n".format(cpu_name))
-            fichier.write("GPUs:\n")
-            fichier.write("Number of GPUs: {}\n".format(self.num_gpus))
-            for i in range(self.num_gpus):
-                gpu_handle = pynvml.nvmlDeviceGetHandleByIndex(i)
-                gpu_name = pynvml.nvmlDeviceGetName(gpu_handle)
-                fichier.write("GPU {}: {}\n".format(i+1, gpu_name))
-            fichier.write("Mémoire RAM moyenne utilisée: {} Go\n".format(average_ram))
-            fichier.write("The CPU usage factor is: {}\n".format(cpu_usage))
-            fichier.write("The GPU usage factor is: {}\n".format(gpu_usage))
-            self.fichier_total()
-        fichier.close()
+            return False
         
         
 
@@ -279,7 +299,10 @@ class Monitor(Thread):
                 powerNeeded_memory = PUE_used * (memory * power_memory)
                 powerNeeded = powerNeeded_core + powerNeeded_memory
                 energyNeeded = (runTime/60) * powerNeeded * PSF / 1000
-                carbonIntensity = self.carbon/self.carboncount
+                if (self.carboncount == 0) :
+                    carbonIntensity = 51.28
+                else :
+                    carbonIntensity = self.carbon/self.carboncount
                 carbonEmissions = energyNeeded * carbonIntensity
                 if (carbonIntensity==51.28):
                     print("La clé API ne fonctionne pas, valeur par défaut générée. Si vous voulez un résultat précis, générez une clée sur https://opendata.reseaux-energies.fr/, et définissez la pour RESEAUX_ENERGIES_TOKEN")
@@ -296,15 +319,45 @@ class Monitor(Thread):
     def changepid(self, pid):
         self.pid=pid
 
-    def carbonIntensity(self):
+    def carbonIntensity_day(self, dateti):
         try :
+            if (dateti.minute<30) :
+                 date = dateti.replace(minute=0)
+            else :
+                 date = dateti.replace(minute=30)
+            data_list = FR.fetch_production(target_datetime=date)
+            date = date.replace(second=0, microsecond = 0)
+            for entry in data_list :
+                total = 0
+                total_production = sum(entry['production'].values())
+                for prod in entry['production'] :
+                    total += entry['production'][prod]*self.get_value_for_data(prod)
+                self.carbon += total/total_production
+                self.carboncount += 1
+        except KeyError :
+            #print("La clé API ne fonctionne pas, valeur par défaut générée. Si vous voulez un résultat précis, générez une clée sur https://opendata.reseaux-energies.fr/, et définissez la pour RESEAUX_ENERGIES_TOKEN")
+            return self.get_value_for_data("France")
+        except Exception :
+            #print("La clé API ne fonctionne pas, valeur par défaut générée. Si vous voulez un résultat précis, générez une clée sur https://opendata.reseaux-energies.fr/, et définissez la pour RESEAUX_ENERGIES_TOKEN")
+            return self.get_value_for_data("France")
+    
+    def carbonIntensity_date(self, dateti):
+        try :
+            if (dateti.minute<30) :
+                 date = dateti.replace(minute=0)
+            else :
+                 date = dateti.replace(minute=30)
             data_list = FR.fetch_production()
-            entry = data_list[-1]
-            total = 0
-            total_production = sum(entry['production'].values())
-            for prod in entry['production'] :
-                total += entry['production'][prod]*self.get_value_for_data(prod)
-            return total/total_production
+            date = date.replace(second=0, microsecond = 0)
+            for entry in data_list :
+                last = entry['datetime'].replace(tzinfo=None)
+                if (((last-date).total_seconds()>=0) or entry==data_list[-1]):
+                    total = 0
+                    total_production = sum(entry['production'].values())
+                    for prod in entry['production'] :
+                        total += entry['production'][prod]*self.get_value_for_data(prod)
+                    self.carbon += total/total_production
+                    self.carboncount += 1
         except KeyError :
             #print("La clé API ne fonctionne pas, valeur par défaut générée. Si vous voulez un résultat précis, générez une clée sur https://opendata.reseaux-energies.fr/, et définissez la pour RESEAUX_ENERGIES_TOKEN")
             return self.get_value_for_data("France")
@@ -312,6 +365,7 @@ class Monitor(Thread):
             #print("La clé API ne fonctionne pas, valeur par défaut générée. Si vous voulez un résultat précis, générez une clée sur https://opendata.reseaux-energies.fr/, et définissez la pour RESEAUX_ENERGIES_TOKEN")
             return self.get_value_for_data("France")
 
+    
 
 
 
@@ -340,6 +394,9 @@ if __name__ == "__main__":
     monitor = Monitor(10)
     print("Start measuring...")
     linux_command(sys.argv[1], monitor)
-    monitor.stop()
-    print("Measurement completed, see the result in the co2 folder")
+    b = monitor.stop()
+    if b :
+        print("Measurement completed, see the result in the co2 folder")
+    else :
+        print("Your command could not be executed")
 
