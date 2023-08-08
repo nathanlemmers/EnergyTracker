@@ -109,7 +109,8 @@ class Monitor(Thread):
             cpu_cores = psutil.cpu_count(logical=True)
             cpu_usage = cpu_total / cpu_cores if cpu_cores > 0 else 0
             self.total_cpu += cpu_usage
-            self.total_ram += psutil.Process(self.pid).memory_info().rss / (1024 ** 3)
+            user_processes = [p for p in psutil.process_iter(['pid', 'username']) if p.info['username'] == current_user]
+            self.total_ram += sum(p.memory_info().rss / (1024 ** 3) for p in user_processes)
             self.count += 1
             if (self.count%(23.5*3600/self.delay)==0):
                 try :
@@ -157,7 +158,7 @@ class Monitor(Thread):
                 fichier.write("This file is the most precise\n")
                 fichier.write("Stats :\n{} g de co2.\n{} kWh\n".format(GA[0], GA[1]))
                 self.fichier_total_GA(GA[0], GA[1])
-            #else :
+            else :
                 #On écrit les output à mettre à la main dans GreenAlgorithm ici. C'est la mesure la plus précise que l'on puisse avoir.
                 fichier.write("If you want more precise and efficient stats, enter your data in the csv file.")
                 fichier.write("Stats for GreenAlgorithm: http://calculator.green-algorithms.org/\n")
@@ -171,6 +172,8 @@ class Monitor(Thread):
                 for i in range(self.num_gpus):
                     gpu_handle = pynvml.nvmlDeviceGetHandleByIndex(i)
                     gpu_name = pynvml.nvmlDeviceGetName(gpu_handle)
+                    if isinstance(gpu_name, bytes):
+                        gpu_name = gpu_name.decode('utf-8')
                     fichier.write("GPU {}: {}\n".format(i+1, gpu_name))
                 fichier.write("Mémoire RAM moyenne utilisée: {} Go\n".format(average_ram))
                 fichier.write("The CPU usage factor is: {}\n".format(cpu_usage))
@@ -223,7 +226,7 @@ class Monitor(Thread):
     def fichier_total(self):
 
         # Chemin vers le premier fichier CSV
-        chemin_fichier_source = 'co2/'+self.dossier+'/codecarbon_emissions.csv'
+        chemin_fichier_source = 'co2/'+self.dossier+'/eco2ai_emissions.csv'
 
         # Vérifier si le fichier "total.csv" existe déjà
         chemin_fichier_total = "co2/total.csv"
@@ -239,10 +242,10 @@ class Monitor(Thread):
         df_source = pd.read_csv(chemin_fichier_source)
 
         # Obtenir la valeur de la colonne "emissions" du premier fichier
-        valeur_emissions = df_source["emissions"].values[0]
+        valeur_emissions = df_source["CO2_emissions(kg)"].values[0]
 
         # Obtenir la valeur de la colonne "energy_consumed" du premier fichier
-        valeur_energy_consumed = df_source["energy_consumed"].values[0]
+        valeur_energy_consumed = df_source["power_consumption(kWh)"].values[0]
 
         # Ajouter les valeurs aux valeurs existantes dans les colonnes "emissions" et "total_energy" du fichier "total.csv"
         df_total.loc[0, "total emissions (kg)"] += valeur_emissions
