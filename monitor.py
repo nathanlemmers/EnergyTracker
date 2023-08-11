@@ -22,9 +22,11 @@ warnings.filterwarnings("ignore")
 
 
 class Monitor(Thread):
-    global total_cpu, count, cpu_now, total_gpu, gpu_now,  tracker_codecarbon, tracker_eco2ai, tracker_carbontracker, total_time, start_time, total_ram,num_gpus, pid, dossier, carbon, carboncount, new_time
+    global total_cpu, count, cpu_now, total_gpu, gpu_now,  tracker_codecarbon, tracker_eco2ai, tracker_carbontracker, total_time, start_time, total_ram,num_gpus, pid, dossier, carbon, carboncount, new_time, pue
 
-    def __init__(self, delay):
+    def __init__(self, delay, pue):
+        
+        self.pue = pue
         super(Monitor, self).__init__()
         #Création du dossier co2 pour ranger les données, un sous dossier ave la date sera fait ensuite.
         rep="co2"
@@ -293,7 +295,7 @@ class Monitor(Thread):
                 usageCPU=CPU_usage
                 usageGPU=GPU_usage
                 PSF=1
-                PUE_used = 1.67
+                PUE_used = self.pue
                 powerNeeded_CPU = PUE_used * numberCPUs * CPUpower * usageCPU
                 powerNeeded_GPU = PUE_used * numberGPUs * GPUpower * usageGPU
                 """if (powerNeeded_GPU==0) :
@@ -391,10 +393,15 @@ def linux_command(command, monitor):
 
 #En cas d'utilisation en executable :
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("Usage: python script.py 'votre_commande_linux'")
+    pue = 1.67
+    if len(sys.argv) < 2:
+        print("Linux command is missing")
         sys.exit(1)
-    monitor = Monitor(10)
+    for i in sys.argv:
+        if (i.startswith("pue=")) :
+            pue = sys.argv[2].split('=')[1]
+            pue = float(pue.replace(',', '.'))
+    monitor = Monitor(10, pue)
     print("Start measuring...")
     linux_command(sys.argv[1], monitor)
     b = monitor.stop()
