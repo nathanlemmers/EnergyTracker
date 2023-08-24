@@ -22,7 +22,7 @@ warnings.filterwarnings("ignore")
 
 
 class Monitor(Thread):
-    global total_cpu, count, cpu_now, total_gpu, gpu_now,  tracker_codecarbon, tracker_eco2ai, tracker_carbontracker, total_time, start_time, total_ram,num_gpus, pid, dossier, carbon, carboncount, new_time, pue
+    global total_cpu, count, cpu_now, total_gpu, gpu_now,  tracker_codecarbon, tracker_eco2ai, tracker_carbontracker, total_time, start_time, total_ram,num_gpus, pid, dossier, carbon, carboncount, new_time, pue, GPU_power_info, total_gpu_pynvml
 
     def __init__(self, delay, pue):
         
@@ -39,6 +39,8 @@ class Monitor(Thread):
         self.total_cpu = 0
         self.count = 0 
         self.total_gpu = 0
+        self.total_gpu_pynvml = 0
+        self.GPU_power_info = 0
         self.total_ram = 0
         self.carboncount = 0
         self.carbon = 0
@@ -55,7 +57,7 @@ class Monitor(Thread):
         self.tracker_eco2ai = eco2ai.Tracker(project_name="My_default_project_name", experiment_description="We trained...", file_name="co2/"+self.dossier+"/eco2ai_emissions.csv")
         
         #Lancement de CarbonTracker 
-        #self.tracker_carbontracker = CarbonTracker(epochs=1, log_dir="co2/"+self.dossier, log_file_prefix="carbontracker_emissions")
+        self.tracker_carbontracker = CarbonTracker(epochs=1, log_dir="co2/"+self.dossier, log_file_prefix="carbontracker_emissions")
         
 
         # Initialiser la bibliothèque pynvml
@@ -72,7 +74,7 @@ class Monitor(Thread):
         self.tracker_codecarbon.start()
         
         self.tracker_eco2ai.start()
-        #self.tracker_carbontracker.epoch_start()
+        self.tracker_carbontracker.epoch_start()
         self.pid = os.getpid()
         
         self.start()
@@ -82,7 +84,9 @@ class Monitor(Thread):
         current_user = psutil.Process().username()
         while not self.stopped:
             #Ici, on cherche l'usage factor du GPU. Donc on lance prend la mesure toutes les 10s et on prendra ensuite la moyenne.
-            self.gpu_now = 0
+            self.gpu_now_pynvml = 0
+            gpu_now = 0
+            gpu_mwatt = 0
             # Parcourir chaque GPU et trouver celui associé au processus en cours
             try :
                 for i in range(self.num_gpus):
@@ -96,7 +100,8 @@ class Monitor(Thread):
                             user_name = None
                             # Si le processus n'existe plus, il peut être ignoré
                         if user_name == current_user:
-                            self.gpu_now = pynvml.nvmlDeviceGetUtilizationRates(handle).gpu
+                            self.gpu_now_pynvml = pynvml.nvmlDeviceGetUtilizationRates(handle).gpu
+                            gpu_mwatt = pynvml.nvmlDeviceGetPowerUsage(handle)
                             break
             except pynvml.NVMLError_FunctionNotFound:
             # La fonction n'est pas trouvée, la carte graphique Nvidia n'est pas disponible
@@ -104,7 +109,10 @@ class Monitor(Thread):
             except pynvml.NVMLError as e:
                 # Une autre erreur liée à pynvml s'est produite
                 pass
-            self.total_gpu += self.gpu_now
+            gpu_now = self.get_pids_for_user(current_user)
+            self.GPU_power_info += gpu_mwatt
+            self.total_gpu_pynvml += self.gpu_now_pynvml
+            self.total_gpu += gpu_now
             #Pareil, mais usage factor du CPU
             user_processes = [p.info for p in psutil.process_iter(['pid', 'username', 'cpu_percent']) if p.info['username'] == current_user]
             cpu_total = sum(p['cpu_percent'] for p in user_processes)
@@ -125,13 +133,14 @@ class Monitor(Thread):
         
 
     def stop(self):
+        current_user = psutil.Process().username()
         #On stoppe tous les trackers
         self.stopped = True
         self.carbonIntensity_date(self.new_time)
         self.total_time = (time.time() - self.start_time)/60
         self.tracker_eco2ai.stop()
-        #self.tracker_carbontracker.epoch_end()
-        #self.tracker_carbontracker.stop()
+        self.tracker_carbontracker.epoch_end()
+        self.tracker_carbontracker.stop()
         self.tracker_codecarbon.stop()
         #En minutes
         cpu_name =cpuinfo.get_cpu_info()['brand_raw']
@@ -152,15 +161,21 @@ class Monitor(Thread):
         if (self.count!=0):     
             average_ram = self.total_ram/self.count
             cpu_usage = self.total_cpu/self.count/100
+            gpu_usage_pynvml = self.total_gpu_pynvml/self.count/100
             gpu_usage = self.total_gpu/self.count/100
-            GA = self.GreenAlgo(self.total_time, cpu_name, nb_cpu, gpu_name, self.num_gpus, average_ram, cpu_usage, gpu_usage)
+            gpu_mwatt = self.GPU_power_info/self.count
+            if gpu_usage_pynvml ==0 :
+                ratio_gpu = 0
+            else : 
+                ratio_gpu = gpu_usage/gpu_usage_pynvml
+            GA = self.GreenAlgo(self.total_time, cpu_name, nb_cpu, gpu_name, self.num_gpus, average_ram, cpu_usage, gpu_mwatt, ratio_gpu)
             
             fichier = open("co2/"+self.dossier+"/GreenAlgorithm_emissions.txt", "w")
             if GA is not None :
                 fichier.write("This file is the most precise\n")
                 fichier.write("Stats :\n{} g de co2.\n{} kWh\n".format(GA[0], GA[1]))
                 self.fichier_total_GA(GA[0], GA[1])
-            else :
+            #else :
                 #On écrit les output à mettre à la main dans GreenAlgorithm ici. C'est la mesure la plus précise que l'on puisse avoir.
                 fichier.write("If you want more precise and efficient stats, enter your data in the csv file.")
                 fichier.write("Stats for GreenAlgorithm: http://calculator.green-algorithms.org/\n")
@@ -279,7 +294,7 @@ class Monitor(Thread):
         # Enregistrer le résultat dans le fichier "total.csv"
         df_total.to_csv(chemin_fichier_total, index=False)
 
-    def GreenAlgo(self, time_code, cpu_name , number_core_code, gpu_name, number_gpu_code, ram_moyenne, CPU_usage, GPU_usage) :
+    def GreenAlgo(self, time_code, cpu_name , number_core_code, gpu_name, number_gpu_code, ram_moyenne, CPU_usage, GPU_mwatt, ratio_GPU) :
         runTime=time_code
         numberCPUs=number_core_code
         numberGPUs=number_gpu_code
@@ -293,11 +308,10 @@ class Monitor(Thread):
                 memory=ram_moyenne
                 power_memory = self.get_value_for_data("memory_power")
                 usageCPU=CPU_usage
-                usageGPU=GPU_usage
                 PSF=1
                 PUE_used = self.pue
                 powerNeeded_CPU = PUE_used * numberCPUs * CPUpower * usageCPU
-                powerNeeded_GPU = PUE_used * numberGPUs * GPUpower * usageGPU
+                powerNeeded_GPU = PUE_used * GPU_mwatt * ratio_GPU / 1000
                 """if (powerNeeded_GPU==0) :
                     print("GPU utilisation : 0%")"""
                 powerNeeded_core = powerNeeded_CPU + powerNeeded_GPU
@@ -370,6 +384,27 @@ class Monitor(Thread):
             #print("La clé API ne fonctionne pas, valeur par défaut générée. Si vous voulez un résultat précis, générez une clée sur https://opendata.reseaux-energies.fr/, et définissez la pour RESEAUX_ENERGIES_TOKEN")
             return self.get_value_for_data("France")
 
+    def get_pids_for_user(self, username):
+        try:
+            usage = 0
+            # Exécute la commande pgrep pour obtenir les PID de l'utilisateur spécifié
+            pgrep_output = subprocess.check_output(["pgrep", "-u", username]).decode()
+
+            # Divise la sortie en lignes (un PID par ligne)
+            pids = [int(pid) for pid in pgrep_output.strip().split('\n')]
+            
+            nvidia_smi_output = subprocess.check_output(["nvidia-smi", "pmon", "-c", "1", "-s", "um"]).decode()
+            lines = nvidia_smi_output.strip().split('\n')
+            for line in lines[2:]:  # Omettre les deux premières lignes de commentaires
+                tokens = line.split()
+                if (tokens[1]== "-"):
+                    usage+= 0
+                elif int(tokens[1]) in pids :
+                    usage += float(tokens[3])
+            return usage
+        except subprocess.CalledProcessError:
+            print(f"Erreur lors de l'exécution de pgrep pour l'utilisateur {username}.")
+            return 0
     
 
 
