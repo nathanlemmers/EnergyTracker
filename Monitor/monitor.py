@@ -8,7 +8,7 @@ import psutil
 import pynvml
 
 import eco2ai
-from carbontracker.tracker import CarbonTracker
+#from carbontracker.tracker import CarbonTracker
 import os
 import cpuinfo
 import re
@@ -57,7 +57,7 @@ class Monitor(Thread):
         self.tracker_eco2ai = eco2ai.Tracker(project_name="My_default_project_name", experiment_description="We trained...", file_name="co2/"+self.dossier+"/eco2ai_emissions.csv")
         
         #Lancement de CarbonTracker 
-        self.tracker_carbontracker = CarbonTracker(epochs=1, log_dir="co2/"+self.dossier, log_file_prefix="carbontracker_emissions")
+        #self.tracker_carbontracker = CarbonTracker(epochs=1, log_dir="co2/"+self.dossier, log_file_prefix="carbontracker_emissions")
         
 
         # Initialiser la bibliothèque pynvml
@@ -74,7 +74,7 @@ class Monitor(Thread):
         self.tracker_codecarbon.start()
         
         self.tracker_eco2ai.start()
-        self.tracker_carbontracker.epoch_start()
+        #self.tracker_carbontracker.epoch_start()
         self.pid = os.getpid()
         
         self.start()
@@ -109,7 +109,7 @@ class Monitor(Thread):
             except pynvml.NVMLError as e:
                 # Une autre erreur liée à pynvml s'est produite
                 pass
-            gpu_now = self.get_pids_for_user(current_user)
+            gpu_now = self.nvidia_smi(current_user)
             self.GPU_power_info += gpu_mwatt
             self.total_gpu_pynvml += self.gpu_now_pynvml
             self.total_gpu += gpu_now
@@ -139,13 +139,13 @@ class Monitor(Thread):
         self.carbonIntensity_date(self.new_time)
         self.total_time = (time.time() - self.start_time)/60
         self.tracker_eco2ai.stop()
-        self.tracker_carbontracker.epoch_end()
-        self.tracker_carbontracker.stop()
+        #self.tracker_carbontracker.epoch_end()
+        #self.tracker_carbontracker.stop()
         self.tracker_codecarbon.stop()
         #En minutes
         cpu_name =cpuinfo.get_cpu_info()['brand_raw']
         nb_cpu = self.count_cpus()
-        gpu_name = None
+        gpu_name = "No NVIDIA graphuc card found"
         try :
             for i in range(self.num_gpus):
                 gpu_handle = pynvml.nvmlDeviceGetHandleByIndex(i)
@@ -168,14 +168,14 @@ class Monitor(Thread):
                 ratio_gpu = 0
             else : 
                 ratio_gpu = gpu_usage/gpu_usage_pynvml
-            GA = self.GreenAlgo(self.total_time, cpu_name, nb_cpu, gpu_name, self.num_gpus, average_ram, cpu_usage, gpu_mwatt, ratio_gpu)
+            GA = self.GreenAlgo(self.total_time, cpu_name, nb_cpu, self.num_gpus, average_ram, cpu_usage, gpu_mwatt, ratio_gpu)
             
             fichier = open("co2/"+self.dossier+"/GreenAlgorithm_emissions.txt", "w")
             if GA is not None :
                 fichier.write("This file is the most precise\n")
                 fichier.write("Stats :\n{} g de co2.\n{} kWh\n".format(GA[0], GA[1]))
                 self.fichier_total_GA(GA[0], GA[1])
-            #else :
+            else :
                 #On écrit les output à mettre à la main dans GreenAlgorithm ici. C'est la mesure la plus précise que l'on puisse avoir.
                 fichier.write("If you want more precise and efficient stats, enter your data in the csv file.")
                 fichier.write("Stats for GreenAlgorithm: http://calculator.green-algorithms.org/\n")
@@ -294,38 +294,33 @@ class Monitor(Thread):
         # Enregistrer le résultat dans le fichier "total.csv"
         df_total.to_csv(chemin_fichier_total, index=False)
 
-    def GreenAlgo(self, time_code, cpu_name , number_core_code, gpu_name, number_gpu_code, ram_moyenne, CPU_usage, GPU_mwatt, ratio_GPU) :
+    def GreenAlgo(self, time_code, cpu_name , number_core_code, number_gpu_code, ram_moyenne, CPU_usage, GPU_mwatt, ratio_GPU) :
         runTime=time_code
         numberCPUs=number_core_code
         numberGPUs=number_gpu_code
         CPUpower = self.get_value_for_data(cpu_name)
         if CPUpower is not None :
-            if gpu_name is not None :
-                GPUpower = self.get_value_for_data(gpu_name)
+            memory=ram_moyenne
+            power_memory = self.get_value_for_data("memory_power")
+            usageCPU=CPU_usage
+            PSF=1
+            PUE_used = self.pue
+            powerNeeded_CPU = PUE_used * numberCPUs * CPUpower * usageCPU
+            powerNeeded_GPU = PUE_used * GPU_mwatt * ratio_GPU / 1000
+            """if (powerNeeded_GPU==0) :
+                print("GPU utilisation : 0%")"""
+            powerNeeded_core = powerNeeded_CPU + powerNeeded_GPU
+            powerNeeded_memory = PUE_used * (memory * power_memory)
+            powerNeeded = powerNeeded_core + powerNeeded_memory
+            energyNeeded = (runTime/60) * powerNeeded * PSF / 1000
+            if (self.carboncount == 0) :
+                carbonIntensity = 51.28
             else :
-                GPUpower = 0
-            if GPUpower is not None :
-                memory=ram_moyenne
-                power_memory = self.get_value_for_data("memory_power")
-                usageCPU=CPU_usage
-                PSF=1
-                PUE_used = self.pue
-                powerNeeded_CPU = PUE_used * numberCPUs * CPUpower * usageCPU
-                powerNeeded_GPU = PUE_used * GPU_mwatt * ratio_GPU / 1000
-                """if (powerNeeded_GPU==0) :
-                    print("GPU utilisation : 0%")"""
-                powerNeeded_core = powerNeeded_CPU + powerNeeded_GPU
-                powerNeeded_memory = PUE_used * (memory * power_memory)
-                powerNeeded = powerNeeded_core + powerNeeded_memory
-                energyNeeded = (runTime/60) * powerNeeded * PSF / 1000
-                if (self.carboncount == 0) :
-                    carbonIntensity = 51.28
-                else :
-                    carbonIntensity = self.carbon/self.carboncount
-                carbonEmissions = energyNeeded * carbonIntensity
-                if (carbonIntensity==51.28):
-                    print("La clé API ne fonctionne pas, valeur par défaut générée. Si vous voulez un résultat précis, générez une clée sur https://opendata.reseaux-energies.fr/, et définissez la pour RESEAUX_ENERGIES_TOKEN")
-                return [carbonEmissions, energyNeeded]
+                carbonIntensity = self.carbon/self.carboncount
+            carbonEmissions = energyNeeded * carbonIntensity
+            if (carbonIntensity==51.28):
+                print("La clé API ne fonctionne pas, valeur par défaut générée. Si vous voulez un résultat précis, générez une clée sur https://opendata.reseaux-energies.fr/, et définissez la pour RESEAUX_ENERGIES_TOKEN")
+            return [carbonEmissions, energyNeeded]
         return None
 
     def get_value_for_data(self, target_data):
@@ -384,7 +379,7 @@ class Monitor(Thread):
             #print("La clé API ne fonctionne pas, valeur par défaut générée. Si vous voulez un résultat précis, générez une clée sur https://opendata.reseaux-energies.fr/, et définissez la pour RESEAUX_ENERGIES_TOKEN")
             return self.get_value_for_data("France")
 
-    def get_pids_for_user(self, username):
+    def nvidia_smi(self, username):
         try:
             usage = 0
             # Exécute la commande pgrep pour obtenir les PID de l'utilisateur spécifié
@@ -402,8 +397,9 @@ class Monitor(Thread):
                 elif int(tokens[1]) in pids :
                     usage += float(tokens[3])
             return usage
-        except subprocess.CalledProcessError:
-            print(f"Erreur lors de l'exécution de pgrep pour l'utilisateur {username}.")
+        except Exception:
+            if self.count==0 :
+                print("No NVIDIA graphic card found, GPU utilization is set to 0")
             return 0
     
 
