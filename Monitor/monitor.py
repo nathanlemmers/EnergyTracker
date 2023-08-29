@@ -8,7 +8,7 @@ import psutil
 import pynvml
 
 import eco2ai
-#from carbontracker.tracker import CarbonTracker
+from carbontracker.tracker import CarbonTracker
 import os
 import cpuinfo
 import re
@@ -64,6 +64,10 @@ class Monitor(Thread):
         try : 
             pynvml.nvmlInit()
             self.num_gpus = pynvml.nvmlDeviceGetCount()
+            self.gpu_ref = []
+            for i in range(self.num_gpus) :
+                self.gpu_ref.append(pynvml.nvmlDeviceGetPowerUsage(pynvml.nvmlDeviceGetHandleByIndex(i)))
+
         except pynvml.NVMLError_FunctionNotFound:
             # La fonction n'est pas trouvée, la carte graphique Nvidia n'est pas disponible
             self.num_gpus = 0
@@ -101,7 +105,11 @@ class Monitor(Thread):
                             # Si le processus n'existe plus, il peut être ignoré
                         if user_name == current_user:
                             self.gpu_now_pynvml = pynvml.nvmlDeviceGetUtilizationRates(handle).gpu
-                            gpu_mwatt = pynvml.nvmlDeviceGetPowerUsage(handle)
+                            if self.gpu_now_pynvml==0 :
+                                self.gpu_ref[i] = pynvml.nvmlDeviceGetPowerUsage(handle)
+                            gpu_mwatt = pynvml.nvmlDeviceGetPowerUsage(handle) -self.gpu_ref[i]
+                            if gpu_mwatt<0 :
+                                gpu_mwatt=0
                             break
             except pynvml.NVMLError_FunctionNotFound:
             # La fonction n'est pas trouvée, la carte graphique Nvidia n'est pas disponible
@@ -116,7 +124,7 @@ class Monitor(Thread):
             #Pareil, mais usage factor du CPU
             user_processes = [p.info for p in psutil.process_iter(['pid', 'username', 'cpu_percent']) if p.info['username'] == current_user]
             cpu_total = sum(p['cpu_percent'] for p in user_processes)
-            cpu_cores = psutil.cpu_count(logical=True)
+            cpu_cores = psutil.cpu_count(logical=False)
             cpu_usage = cpu_total / cpu_cores if cpu_cores > 0 else 0
             self.total_cpu += cpu_usage
             user_processes = [p for p in psutil.process_iter(['pid', 'username']) if p.info['username'] == current_user]
@@ -133,7 +141,6 @@ class Monitor(Thread):
         
 
     def stop(self):
-        current_user = psutil.Process().username()
         #On stoppe tous les trackers
         self.stopped = True
         self.carbonIntensity_date(self.new_time)
@@ -168,7 +175,7 @@ class Monitor(Thread):
                 ratio_gpu = 0
             else : 
                 ratio_gpu = gpu_usage/gpu_usage_pynvml
-            GA = self.GreenAlgo(self.total_time, cpu_name, nb_cpu, self.num_gpus, average_ram, cpu_usage, gpu_mwatt, ratio_gpu)
+            GA = self.GreenAlgo_adapted(self.total_time, cpu_name, nb_cpu, average_ram, cpu_usage, gpu_mwatt, ratio_gpu)
             
             fichier = open("co2/"+self.dossier+"/GreenAlgorithm_emissions.txt", "w")
             if GA is not None :
@@ -294,10 +301,9 @@ class Monitor(Thread):
         # Enregistrer le résultat dans le fichier "total.csv"
         df_total.to_csv(chemin_fichier_total, index=False)
 
-    def GreenAlgo(self, time_code, cpu_name , number_core_code, number_gpu_code, ram_moyenne, CPU_usage, GPU_mwatt, ratio_GPU) :
+    def GreenAlgo_adapted(self, time_code, cpu_name , number_core_code, ram_moyenne, CPU_usage, GPU_mwatt, ratio_GPU) :
         runTime=time_code
         numberCPUs=number_core_code
-        numberGPUs=number_gpu_code
         CPUpower = self.get_value_for_data(cpu_name)
         if CPUpower is not None :
             memory=ram_moyenne
