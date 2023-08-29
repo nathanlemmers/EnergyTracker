@@ -151,7 +151,7 @@ class Monitor(Thread):
         self.tracker_codecarbon.stop()
         #En minutes
         cpu_name =cpuinfo.get_cpu_info()['brand_raw']
-        nb_cpu = self.count_cpus()
+        nb_cpu = psutil.cpu_count(logical=False)
         gpu_name = "No NVIDIA graphuc card found"
         try :
             for i in range(self.num_gpus):
