@@ -1,0 +1,2 @@
+id,project_name,experiment_description,epoch,start_time,duration(s),power_consumption(kWh),CO2_emissions(kg),CPU_name,GPU_name,OS,region/country,cost
+0120fffe-861f-4ef6-b65f-5f2a31bf5070,My_default_project_name,We trained...,N/A,2023-07-04 10:05:52,562.6173508167267,0.004280940368055225,0.00028909190305476936,"Intel(R) Xeon(R) CPU E5-2680 v4 @ 2.40GHz/2 device(s), TDP:120.0",Tesla P100-PCIE-12GB 1 device(s),Linux,FR/Auvergne-Rhône-Alpes,0

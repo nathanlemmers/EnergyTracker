@@ -1,0 +1,2875 @@
+Traceback (most recent call last):
+  File "digits_recognition_cnn.py", line 2, in <module>
+    import tensorflow as tf
+ImportError: No module named tensorflow
+Traceback (most recent call last):
+  File "digits_recognition_cnn.py", line 2, in <module>
+    import tensorflow as tf
+ImportError: No module named tensorflow
+Traceback (most recent call last):
+  File "digits_recognition_cnn.py", line 2, in <module>
+    import tensorflow as tf
+ModuleNotFoundError: No module named 'tensorflow'
+Traceback (most recent call last):
+  File "/home/nlemmers/ImageRecognition/digits_recognition_cnn.py", line 2, in <module>
+    import tensorflow as tf
+ModuleNotFoundError: No module named 'tensorflow'
+opcode[93].specializable : 1
+opcode[0].pair_count[1] : 58
+opcode[0].pair_count[135] : 15
+opcode[0].pair_count[149] : 33
+opcode[0].pair_count[150] : 451
+opcode[0].pair_count[151] : 302
+    opcode[1].execution_count : 1613
+opcode[1].pair_count[2] : 56
+opcode[1].pair_count[9] : 132
+opcode[1].pair_count[38] : 96
+opcode[1].pair_count[44] : 21
+opcode[1].pair_count[46] : 113
+opcode[1].pair_count[47] : 4
+opcode[1].pair_count[48] : 1
+opcode[1].pair_count[55] : 58
+opcode[1].pair_count[83] : 100
+opcode[1].pair_count[89] : 57
+opcode[1].pair_count[91] : 3
+opcode[1].pair_count[100] : 409
+opcode[1].pair_count[101] : 31
+opcode[1].pair_count[105] : 1
+opcode[1].pair_count[110] : 180
+opcode[1].pair_count[116] : 52
+opcode[1].pair_count[124] : 194
+opcode[1].pair_count[140] : 47
+opcode[1].pair_count[150] : 49
+opcode[1].pair_count[151] : 9
+    opcode[2].execution_count : 508
+opcode[2].pair_count[46] : 129
+opcode[2].pair_count[47] : 2
+opcode[2].pair_count[48] : 33
+opcode[2].pair_count[71] : 86
+opcode[2].pair_count[100] : 4
+opcode[2].pair_count[101] : 157
+opcode[2].pair_count[116] : 17
+opcode[2].pair_count[124] : 37
+opcode[2].pair_count[137] : 43
+    opcode[3].execution_count : 77
+opcode[3].pair_count[3] : 17
+opcode[3].pair_count[5] : 2
+opcode[3].pair_count[6] : 6
+opcode[3].pair_count[7] : 1
+opcode[3].pair_count[16] : 1
+opcode[3].pair_count[26] : 9
+opcode[3].pair_count[28] : 7
+opcode[3].pair_count[100] : 9
+opcode[3].pair_count[114] : 8
+opcode[3].pair_count[124] : 17
+    opcode[5].execution_count : 49
+opcode[5].pair_count[99] : 25
+opcode[5].pair_count[100] : 24
+    opcode[6].execution_count : 258
+opcode[6].pair_count[1] : 1
+opcode[6].pair_count[3] : 1
+opcode[6].pair_count[7] : 11
+opcode[6].pair_count[64] : 1
+opcode[6].pair_count[124] : 109
+opcode[6].pair_count[125] : 27
+opcode[6].pair_count[143] : 108
+    opcode[7].execution_count : 12
+opcode[7].pair_count[38] : 12
+    opcode[9].execution_count : 976
+opcode[9].pair_count[2] : 18
+opcode[9].pair_count[9] : 74
+opcode[9].pair_count[46] : 50
+opcode[9].pair_count[47] : 14
+opcode[9].pair_count[48] : 2
+opcode[9].pair_count[55] : 303
+opcode[9].pair_count[100] : 43
+opcode[9].pair_count[101] : 2
+opcode[9].pair_count[116] : 108
+opcode[9].pair_count[124] : 362
+    opcode[11].execution_count : 1
+opcode[11].pair_count[100] : 1
+    opcode[16].execution_count : 25
+opcode[16].pair_count[99] : 25
+    opcode[17].execution_count : 458
+opcode[17].pair_count[17] : 37
+opcode[17].pair_count[18] : 7
+opcode[17].pair_count[20] : 1
+opcode[17].pair_count[21] : 4
+opcode[17].pair_count[64] : 3
+opcode[17].pair_count[100] : 286
+opcode[17].pair_count[102] : 24
+opcode[17].pair_count[124] : 1
+opcode[17].pair_count[128] : 34
+opcode[17].pair_count[137] : 24
+opcode[17].pair_count[143] : 21
+opcode[17].pair_count[161] : 16
+    opcode[18].execution_count : 101
+opcode[18].pair_count[35] : 25
+opcode[18].pair_count[46] : 8
+opcode[18].pair_count[64] : 13
+opcode[18].pair_count[113] : 29
+opcode[18].pair_count[125] : 26
+    opcode[20].execution_count : 23
+opcode[20].pair_count[3] : 1
+opcode[20].pair_count[6] : 22
+    opcode[21].execution_count : 72
+opcode[21].pair_count[83] : 23
+opcode[21].pair_count[125] : 49
+    opcode[22].execution_count : 1525
+opcode[22].pair_count[1] : 363
+opcode[22].pair_count[22] : 225
+opcode[22].pair_count[23] : 50
+opcode[22].pair_count[24] : 1
+opcode[22].pair_count[35] : 1
+opcode[22].pair_count[47] : 1
+opcode[22].pair_count[53] : 83
+opcode[22].pair_count[55] : 20
+opcode[22].pair_count[64] : 9
+opcode[22].pair_count[83] : 94
+opcode[22].pair_count[86] : 37
+opcode[22].pair_count[100] : 8
+opcode[22].pair_count[114] : 32
+opcode[22].pair_count[118] : 3
+opcode[22].pair_count[124] : 45
+opcode[22].pair_count[125] : 28
+opcode[22].pair_count[130] : 4
+opcode[22].pair_count[149] : 8
+opcode[22].pair_count[150] : 412
+opcode[22].pair_count[151] : 3
+opcode[22].pair_count[161] : 98
+    opcode[23].specialization.miss : 218
+    opcode[23].execution_count : 812
+opcode[23].pair_count[135] : 23
+opcode[23].pair_count[149] : 10
+opcode[23].pair_count[150] : 509
+opcode[23].pair_count[151] : 52
+opcode[23].pair_count[171] : 218
+    opcode[24].execution_count : 21
+opcode[24].pair_count[150] : 21
+opcode[25].specializable : 1
+    opcode[25].specialization.success : 12
+    opcode[25].specialization.failure : 37
+    opcode[25].specialization.hit : 196
+    opcode[25].specialization.deferred : 409
+    opcode[25].execution_count : 154
+    opcode[25].specialization.failure_kinds[0] : 5
+    opcode[25].specialization.failure_kinds[12] : 8
+    opcode[25].specialization.failure_kinds[13] : 9
+    opcode[25].specialization.failure_kinds[16] : 15
+opcode[25].pair_count[1] : 1
+opcode[25].pair_count[35] : 14
+opcode[25].pair_count[83] : 9
+opcode[25].pair_count[90] : 4
+opcode[25].pair_count[100] : 8
+opcode[25].pair_count[102] : 7
+opcode[25].pair_count[116] : 1
+opcode[25].pair_count[122] : 9
+opcode[25].pair_count[124] : 13
+opcode[25].pair_count[125] : 35
+opcode[25].pair_count[128] : 6
+opcode[25].pair_count[137] : 7
+opcode[25].pair_count[155] : 2
+opcode[25].pair_count[166] : 38
+    opcode[26].execution_count : 119
+opcode[26].pair_count[26] : 23
+opcode[26].pair_count[27] : 1
+opcode[26].pair_count[28] : 10
+opcode[26].pair_count[29] : 6
+opcode[26].pair_count[83] : 17
+opcode[26].pair_count[114] : 54
+opcode[26].pair_count[161] : 8
+    opcode[27].specialization.miss : 3
+    opcode[27].execution_count : 24
+opcode[27].pair_count[55] : 21
+opcode[27].pair_count[107] : 3
+    opcode[28].execution_count : 340
+opcode[28].pair_count[44] : 21
+opcode[28].pair_count[46] : 21
+opcode[28].pair_count[47] : 3
+opcode[28].pair_count[48] : 37
+opcode[28].pair_count[55] : 7
+opcode[28].pair_count[100] : 198
+opcode[28].pair_count[124] : 29
+opcode[28].pair_count[137] : 24
+    opcode[29].execution_count : 348
+opcode[29].pair_count[2] : 8
+opcode[29].pair_count[9] : 24
+opcode[29].pair_count[47] : 1
+opcode[29].pair_count[55] : 3
+opcode[29].pair_count[93] : 8
+opcode[29].pair_count[100] : 2
+opcode[29].pair_count[124] : 302
+    opcode[35].execution_count : 119
+opcode[35].pair_count[47] : 6
+opcode[35].pair_count[48] : 49
+opcode[35].pair_count[49] : 4
+opcode[35].pair_count[101] : 6
+opcode[35].pair_count[116] : 54
+    opcode[36].execution_count : 116
+opcode[36].pair_count[114] : 116
+    opcode[38].execution_count : 950
+opcode[38].pair_count[93] : 950
+    opcode[39].execution_count : 798
+opcode[39].pair_count[35] : 2
+opcode[39].pair_count[39] : 123
+opcode[39].pair_count[40] : 54
+opcode[39].pair_count[41] : 49
+opcode[39].pair_count[46] : 25
+opcode[39].pair_count[56] : 2
+opcode[39].pair_count[59] : 6
+opcode[39].pair_count[64] : 9
+opcode[39].pair_count[100] : 49
+opcode[39].pair_count[114] : 25
+opcode[39].pair_count[118] : 34
+opcode[39].pair_count[124] : 245
+opcode[39].pair_count[125] : 111
+opcode[39].pair_count[129] : 15
+opcode[39].pair_count[143] : 7
+opcode[39].pair_count[161] : 37
+opcode[39].pair_count[172] : 5
+    opcode[40].execution_count : 1024
+opcode[40].pair_count[26] : 2
+opcode[40].pair_count[27] : 23
+opcode[40].pair_count[46] : 109
+opcode[40].pair_count[47] : 1
+opcode[40].pair_count[53] : 50
+opcode[40].pair_count[55] : 3
+opcode[40].pair_count[56] : 29
+opcode[40].pair_count[59] : 26
+opcode[40].pair_count[63] : 58
+opcode[40].pair_count[64] : 5
+opcode[40].pair_count[68] : 25
+opcode[40].pair_count[80] : 20
+opcode[40].pair_count[83] : 60
+opcode[40].pair_count[100] : 167
+opcode[40].pair_count[103] : 8
+opcode[40].pair_count[112] : 25
+opcode[40].pair_count[114] : 32
+opcode[40].pair_count[124] : 76
+opcode[40].pair_count[128] : 81
+opcode[40].pair_count[129] : 65
+opcode[40].pair_count[143] : 64
+opcode[40].pair_count[161] : 53
+opcode[40].pair_count[168] : 2
+opcode[40].pair_count[169] : 40
+    opcode[41].specialization.miss : 309
+    opcode[41].execution_count : 824
+opcode[41].pair_count[39] : 90
+opcode[41].pair_count[46] : 8
+opcode[41].pair_count[47] : 1
+opcode[41].pair_count[48] : 7
+opcode[41].pair_count[56] : 6
+opcode[41].pair_count[58] : 47
+opcode[41].pair_count[59] : 24
+opcode[41].pair_count[64] : 3
+opcode[41].pair_count[68] : 2
+opcode[41].pair_count[106] : 309
+opcode[41].pair_count[115] : 2
+opcode[41].pair_count[118] : 30
+opcode[41].pair_count[124] : 270
+opcode[41].pair_count[125] : 1
+opcode[41].pair_count[129] : 7
+opcode[41].pair_count[161] : 17
+    opcode[44].execution_count : 437
+opcode[44].pair_count[3] : 1
+opcode[44].pair_count[6] : 3
+opcode[44].pair_count[39] : 1
+opcode[44].pair_count[40] : 20
+opcode[44].pair_count[64] : 1
+opcode[44].pair_count[100] : 109
+opcode[44].pair_count[124] : 8
+opcode[44].pair_count[133] : 24
+opcode[44].pair_count[143] : 7
+opcode[44].pair_count[153] : 31
+opcode[44].pair_count[154] : 231
+opcode[44].pair_count[172] : 1
+    opcode[45].execution_count : 381
+opcode[45].pair_count[3] : 17
+opcode[45].pair_count[5] : 23
+opcode[45].pair_count[17] : 2
+opcode[45].pair_count[18] : 14
+opcode[45].pair_count[26] : 3
+opcode[45].pair_count[29] : 28
+opcode[45].pair_count[64] : 7
+opcode[45].pair_count[67] : 37
+opcode[45].pair_count[73] : 23
+opcode[45].pair_count[100] : 169
+opcode[45].pair_count[118] : 24
+opcode[45].pair_count[124] : 13
+opcode[45].pair_count[143] : 13
+opcode[45].pair_count[156] : 8
+    opcode[46].execution_count : 1182
+opcode[46].pair_count[3] : 2
+opcode[46].pair_count[6] : 216
+opcode[46].pair_count[39] : 9
+opcode[46].pair_count[40] : 24
+opcode[46].pair_count[45] : 21
+opcode[46].pair_count[46] : 110
+opcode[46].pair_count[47] : 2
+opcode[46].pair_count[48] : 26
+opcode[46].pair_count[64] : 43
+opcode[46].pair_count[65] : 61
+opcode[46].pair_count[73] : 121
+opcode[46].pair_count[102] : 25
+opcode[46].pair_count[103] : 32
+opcode[46].pair_count[105] : 53
+opcode[46].pair_count[124] : 55
+opcode[46].pair_count[143] : 93
+opcode[46].pair_count[153] : 63
+opcode[46].pair_count[154] : 204
+opcode[46].pair_count[172] : 22
+    opcode[47].execution_count : 198
+opcode[47].pair_count[48] : 55
+opcode[47].pair_count[55] : 143
+    opcode[48].specialization.miss : 308
+    opcode[48].execution_count : 831
+opcode[48].pair_count[36] : 17
+opcode[48].pair_count[45] : 94
+opcode[48].pair_count[46] : 46
+opcode[48].pair_count[47] : 8
+opcode[48].pair_count[48] : 42
+opcode[48].pair_count[55] : 12
+opcode[48].pair_count[56] : 11
+opcode[48].pair_count[64] : 8
+opcode[48].pair_count[66] : 24
+opcode[48].pair_count[77] : 75
+opcode[48].pair_count[83] : 1
+opcode[48].pair_count[102] : 23
+opcode[48].pair_count[116] : 308
+opcode[48].pair_count[124] : 157
+opcode[48].pair_count[136] : 5
+    opcode[49].execution_count : 4
+opcode[49].pair_count[115] : 4
+    opcode[53].execution_count : 178
+opcode[53].pair_count[1] : 163
+opcode[53].pair_count[125] : 7
+opcode[53].pair_count[161] : 8
+    opcode[55].specialization.miss : 89
+    opcode[55].execution_count : 3152
+opcode[55].pair_count[26] : 8
+opcode[55].pair_count[39] : 73
+opcode[55].pair_count[41] : 696
+opcode[55].pair_count[44] : 22
+opcode[55].pair_count[45] : 44
+opcode[55].pair_count[46] : 174
+opcode[55].pair_count[47] : 4
+opcode[55].pair_count[55] : 25
+opcode[55].pair_count[56] : 23
+opcode[55].pair_count[58] : 486
+opcode[55].pair_count[59] : 174
+opcode[55].pair_count[64] : 82
+opcode[55].pair_count[68] : 24
+opcode[55].pair_count[77] : 7
+opcode[55].pair_count[80] : 368
+opcode[55].pair_count[100] : 23
+opcode[55].pair_count[102] : 8
+opcode[55].pair_count[114] : 1
+opcode[55].pair_count[116] : 89
+opcode[55].pair_count[117] : 57
+opcode[55].pair_count[118] : 18
+opcode[55].pair_count[124] : 665
+opcode[55].pair_count[127] : 7
+opcode[55].pair_count[128] : 32
+opcode[55].pair_count[137] : 9
+opcode[55].pair_count[141] : 9
+opcode[55].pair_count[143] : 24
+    opcode[56].execution_count : 202
+opcode[56].pair_count[45] : 38
+opcode[56].pair_count[46] : 11
+opcode[56].pair_count[56] : 26
+opcode[56].pair_count[58] : 22
+opcode[56].pair_count[59] : 30
+opcode[56].pair_count[63] : 12
+opcode[56].pair_count[64] : 1
+opcode[56].pair_count[80] : 7
+opcode[56].pair_count[124] : 55
+    opcode[58].execution_count : 555
+opcode[58].pair_count[44] : 125
+opcode[58].pair_count[45] : 3
+opcode[58].pair_count[46] : 31
+opcode[58].pair_count[47] : 1
+opcode[58].pair_count[48] : 7
+opcode[58].pair_count[64] : 308
+opcode[58].pair_count[124] : 80
+    opcode[59].execution_count : 870
+opcode[59].pair_count[47] : 4
+opcode[59].pair_count[48] : 7
+opcode[59].pair_count[55] : 369
+opcode[59].pair_count[64] : 3
+opcode[59].pair_count[80] : 2
+opcode[59].pair_count[81] : 22
+opcode[59].pair_count[100] : 242
+opcode[59].pair_count[124] : 212
+opcode[59].pair_count[136] : 9
+opcode[60].specializable : 1
+    opcode[60].specialization.success : 5
+    opcode[60].specialization.hit : 92
+    opcode[60].execution_count : 47
+opcode[60].pair_count[9] : 16
+opcode[60].pair_count[89] : 2
+opcode[60].pair_count[100] : 3
+opcode[60].pair_count[101] : 11
+opcode[60].pair_count[116] : 14
+opcode[60].pair_count[124] : 1
+    opcode[61].execution_count : 60
+opcode[61].pair_count[47] : 1
+opcode[61].pair_count[55] : 20
+opcode[61].pair_count[100] : 32
+opcode[61].pair_count[116] : 7
+    opcode[63].specialization.miss : 2
+    opcode[63].execution_count : 132
+opcode[63].pair_count[46] : 34
+opcode[63].pair_count[64] : 3
+opcode[63].pair_count[124] : 50
+opcode[63].pair_count[143] : 43
+opcode[63].pair_count[160] : 2
+    opcode[64].execution_count : 930
+opcode[64].pair_count[22] : 717
+opcode[64].pair_count[23] : 4
+opcode[64].pair_count[64] : 66
+opcode[64].pair_count[65] : 6
+opcode[64].pair_count[66] : 4
+opcode[64].pair_count[67] : 10
+opcode[64].pair_count[73] : 20
+opcode[64].pair_count[76] : 3
+opcode[64].pair_count[77] : 6
+opcode[64].pair_count[78] : 2
+opcode[64].pair_count[79] : 3
+opcode[64].pair_count[80] : 7
+opcode[64].pair_count[81] : 2
+opcode[64].pair_count[113] : 10
+opcode[64].pair_count[121] : 2
+opcode[64].pair_count[127] : 1
+opcode[64].pair_count[141] : 1
+opcode[64].pair_count[143] : 66
+    opcode[65].specialization.miss : 72
+    opcode[65].execution_count : 174
+opcode[65].pair_count[22] : 4
+opcode[65].pair_count[23] : 98
+opcode[65].pair_count[166] : 72
+    opcode[66].execution_count : 44
+opcode[66].pair_count[39] : 25
+opcode[66].pair_count[68] : 11
+opcode[66].pair_count[124] : 8
+    opcode[67].specialization.miss : 38
+    opcode[67].execution_count : 267
+opcode[67].pair_count[35] : 5
+opcode[67].pair_count[53] : 8
+opcode[67].pair_count[83] : 66
+opcode[67].pair_count[112] : 27
+opcode[67].pair_count[125] : 123
+opcode[67].pair_count[166] : 38
+    opcode[68].execution_count : 407
+opcode[68].pair_count[64] : 3
+opcode[68].pair_count[93] : 188
+opcode[68].pair_count[143] : 175
+opcode[68].pair_count[144] : 2
+opcode[68].pair_count[166] : 39
+    opcode[71].execution_count : 86
+opcode[71].pair_count[100] : 86
+    opcode[73].execution_count : 356
+opcode[73].pair_count[1] : 39
+opcode[73].pair_count[64] : 2
+opcode[73].pair_count[73] : 26
+opcode[73].pair_count[83] : 64
+opcode[73].pair_count[114] : 74
+opcode[73].pair_count[115] : 21
+opcode[73].pair_count[128] : 130
+    opcode[75].execution_count : 61
+opcode[75].pair_count[64] : 25
+opcode[75].pair_count[90] : 2
+opcode[75].pair_count[113] : 8
+opcode[75].pair_count[166] : 26
+    opcode[76].execution_count : 54
+opcode[76].pair_count[1] : 25
+opcode[76].pair_count[114] : 21
+opcode[76].pair_count[125] : 8
+    opcode[77].execution_count : 115
+opcode[77].pair_count[114] : 90
+opcode[77].pair_count[115] : 25
+    opcode[78].execution_count : 46
+opcode[78].pair_count[100] : 46
+    opcode[79].execution_count : 16
+opcode[79].pair_count[9] : 3
+opcode[79].pair_count[100] : 11
+opcode[79].pair_count[124] : 2
+    opcode[80].execution_count : 424
+opcode[80].pair_count[1] : 3
+opcode[80].pair_count[99] : 8
+opcode[80].pair_count[124] : 21
+opcode[80].pair_count[145] : 329
+opcode[80].pair_count[161] : 63
+    opcode[81].execution_count : 24
+opcode[81].pair_count[114] : 11
+opcode[81].pair_count[115] : 13
+    opcode[82].execution_count : 21
+opcode[82].pair_count[105] : 15
+opcode[82].pair_count[142] : 6
+    opcode[83].execution_count : 2655
+opcode[83].pair_count[1] : 452
+opcode[83].pair_count[25] : 4
+opcode[83].pair_count[39] : 25
+opcode[83].pair_count[45] : 16
+opcode[83].pair_count[64] : 1
+opcode[83].pair_count[68] : 1
+opcode[83].pair_count[83] : 196
+opcode[83].pair_count[90] : 35
+opcode[83].pair_count[92] : 18
+opcode[83].pair_count[97] : 3
+opcode[83].pair_count[99] : 46
+opcode[83].pair_count[100] : 1
+opcode[83].pair_count[102] : 6
+opcode[83].pair_count[106] : 2
+opcode[83].pair_count[113] : 144
+opcode[83].pair_count[114] : 57
+opcode[83].pair_count[115] : 63
+opcode[83].pair_count[116] : 1
+opcode[83].pair_count[124] : 89
+opcode[83].pair_count[125] : 508
+opcode[83].pair_count[144] : 1
+opcode[83].pair_count[145] : 6
+opcode[83].pair_count[161] : 164
+opcode[83].pair_count[166] : 15
+opcode[83].pair_count[175] : 2
+opcode[83].pair_count[177] : 1
+opcode[83].pair_count[180] : 22
+    opcode[84].execution_count : 4
+opcode[84].pair_count[9] : 1
+opcode[84].pair_count[100] : 1
+opcode[84].pair_count[103] : 1
+opcode[84].pair_count[110] : 1
+    opcode[86].execution_count : 69
+    opcode[89].execution_count : 119
+opcode[89].pair_count[38] : 15
+opcode[89].pair_count[83] : 3
+opcode[89].pair_count[100] : 13
+opcode[89].pair_count[110] : 68
+opcode[89].pair_count[119] : 8
+opcode[89].pair_count[140] : 12
+    opcode[90].execution_count : 1323
+opcode[90].pair_count[1] : 11
+opcode[90].pair_count[2] : 133
+opcode[90].pair_count[9] : 12
+opcode[90].pair_count[83] : 5
+opcode[90].pair_count[89] : 1
+opcode[90].pair_count[90] : 7
+opcode[90].pair_count[91] : 6
+opcode[90].pair_count[100] : 872
+opcode[90].pair_count[101] : 217
+opcode[90].pair_count[103] : 4
+opcode[90].pair_count[105] : 4
+opcode[90].pair_count[109] : 31
+opcode[90].pair_count[110] : 8
+opcode[90].pair_count[136] : 11
+opcode[90].pair_count[144] : 1
+    opcode[91].execution_count : 13
+opcode[91].pair_count[2] : 2
+opcode[91].pair_count[9] : 1
+opcode[91].pair_count[91] : 3
+opcode[91].pair_count[100] : 5
+opcode[91].pair_count[103] : 1
+opcode[91].pair_count[110] : 1
+opcode[92].specializable : 1
+    opcode[92].specialization.success : 5
+    opcode[92].specialization.hit : 168
+    opcode[92].execution_count : 46
+opcode[92].pair_count[90] : 1
+opcode[92].pair_count[125] : 39
+opcode[92].pair_count[138] : 6
+    opcode[93].specialization.failure : 1482
+    opcode[93].execution_count : 1482
+    opcode[93].specialization.failure_kinds[0] : 116
+    opcode[93].specialization.failure_kinds[13] : 630
+    opcode[93].specialization.failure_kinds[14] : 697
+    opcode[93].specialization.failure_kinds[15] : 32
+    opcode[93].specialization.failure_kinds[21] : 5
+    opcode[93].specialization.failure_kinds[23] : 2
+opcode[93].pair_count[2] : 1
+opcode[93].pair_count[38] : 2
+opcode[93].pair_count[46] : 4
+opcode[93].pair_count[47] : 1
+opcode[93].pair_count[55] : 2
+opcode[93].pair_count[83] : 159
+opcode[93].pair_count[90] : 12
+opcode[93].pair_count[91] : 1
+opcode[93].pair_count[92] : 18
+opcode[93].pair_count[100] : 82
+opcode[93].pair_count[101] : 3
+opcode[93].pair_count[110] : 17
+opcode[93].pair_count[116] : 1
+opcode[93].pair_count[124] : 28
+opcode[93].pair_count[125] : 297
+opcode[93].pair_count[140] : 2
+opcode[93].pair_count[161] : 730
+opcode[93].pair_count[177] : 3
+opcode[93].pair_count[180] : 119
+opcode[95].specializable : 1
+    opcode[95].specialization.success : 35
+    opcode[95].specialization.failure : 34
+    opcode[95].specialization.hit : 623
+    opcode[95].specialization.deferred : 151
+    opcode[95].execution_count : 317
+    opcode[95].specialization.failure_kinds[2] : 30
+    opcode[95].specialization.failure_kinds[17] : 4
+opcode[95].pair_count[9] : 14
+opcode[95].pair_count[89] : 1
+opcode[95].pair_count[100] : 102
+opcode[95].pair_count[103] : 8
+opcode[95].pair_count[110] : 37
+opcode[95].pair_count[116] : 12
+opcode[95].pair_count[124] : 139
+opcode[95].pair_count[136] : 3
+opcode[95].pair_count[140] : 1
+    opcode[97].execution_count : 16
+opcode[97].pair_count[100] : 10
+opcode[97].pair_count[116] : 4
+opcode[97].pair_count[124] : 2
+    opcode[99].execution_count : 167
+opcode[99].pair_count[1] : 60
+opcode[99].pair_count[89] : 3
+opcode[99].pair_count[95] : 14
+opcode[99].pair_count[100] : 40
+opcode[99].pair_count[153] : 2
+opcode[99].pair_count[154] : 48
+    opcode[100].execution_count : 6574
+opcode[100].pair_count[3] : 36
+opcode[100].pair_count[5] : 24
+opcode[100].pair_count[16] : 24
+opcode[100].pair_count[17] : 291
+opcode[100].pair_count[20] : 22
+opcode[100].pair_count[21] : 68
+opcode[100].pair_count[25] : 52
+opcode[100].pair_count[26] : 18
+opcode[100].pair_count[28] : 161
+opcode[100].pair_count[29] : 307
+opcode[100].pair_count[56] : 2
+opcode[100].pair_count[59] : 22
+opcode[100].pair_count[60] : 14
+opcode[100].pair_count[64] : 84
+opcode[100].pair_count[65] : 70
+opcode[100].pair_count[68] : 11
+opcode[100].pair_count[73] : 164
+opcode[100].pair_count[79] : 1
+opcode[100].pair_count[83] : 1062
+opcode[100].pair_count[90] : 305
+opcode[100].pair_count[97] : 8
+opcode[100].pair_count[100] : 876
+opcode[100].pair_count[101] : 77
+opcode[100].pair_count[102] : 26
+opcode[100].pair_count[103] : 11
+opcode[100].pair_count[105] : 3
+opcode[100].pair_count[106] : 3
+opcode[100].pair_count[107] : 125
+opcode[100].pair_count[108] : 66
+opcode[100].pair_count[110] : 4
+opcode[100].pair_count[113] : 90
+opcode[100].pair_count[116] : 7
+opcode[100].pair_count[118] : 8
+opcode[100].pair_count[120] : 4
+opcode[100].pair_count[122] : 68
+opcode[100].pair_count[124] : 151
+opcode[100].pair_count[125] : 252
+opcode[100].pair_count[130] : 2
+opcode[100].pair_count[132] : 930
+opcode[100].pair_count[133] : 120
+opcode[100].pair_count[136] : 4
+opcode[100].pair_count[143] : 5
+opcode[100].pair_count[144] : 130
+opcode[100].pair_count[147] : 323
+opcode[100].pair_count[156] : 36
+opcode[100].pair_count[157] : 7
+opcode[100].pair_count[160] : 11
+opcode[100].pair_count[161] : 67
+opcode[100].pair_count[162] : 10
+opcode[100].pair_count[166] : 297
+opcode[100].pair_count[172] : 115
+    opcode[101].execution_count : 853
+opcode[101].pair_count[2] : 25
+opcode[101].pair_count[25] : 2
+opcode[101].pair_count[36] : 7
+opcode[101].pair_count[68] : 3
+opcode[101].pair_count[90] : 104
+opcode[101].pair_count[95] : 2
+opcode[101].pair_count[100] : 207
+opcode[101].pair_count[101] : 102
+opcode[101].pair_count[102] : 8
+opcode[101].pair_count[103] : 3
+opcode[101].pair_count[104] : 2
+opcode[101].pair_count[105] : 6
+opcode[101].pair_count[106] : 56
+opcode[101].pair_count[107] : 2
+opcode[101].pair_count[111] : 2
+opcode[101].pair_count[112] : 4
+opcode[101].pair_count[114] : 44
+opcode[101].pair_count[115] : 27
+opcode[101].pair_count[118] : 2
+opcode[101].pair_count[120] : 2
+opcode[101].pair_count[122] : 4
+opcode[101].pair_count[136] : 1
+opcode[101].pair_count[144] : 2
+opcode[101].pair_count[155] : 13
+opcode[101].pair_count[160] : 73
+opcode[101].pair_count[162] : 1
+opcode[101].pair_count[166] : 140
+opcode[101].pair_count[172] : 9
+    opcode[102].execution_count : 311
+opcode[102].pair_count[36] : 38
+opcode[102].pair_count[64] : 1
+opcode[102].pair_count[68] : 4
+opcode[102].pair_count[77] : 7
+opcode[102].pair_count[83] : 41
+opcode[102].pair_count[86] : 25
+opcode[102].pair_count[90] : 2
+opcode[102].pair_count[100] : 116
+opcode[102].pair_count[101] : 22
+opcode[102].pair_count[102] : 11
+opcode[102].pair_count[105] : 32
+opcode[102].pair_count[125] : 3
+opcode[102].pair_count[166] : 9
+    opcode[103].execution_count : 330
+opcode[103].pair_count[26] : 8
+opcode[103].pair_count[64] : 1
+opcode[103].pair_count[83] : 1
+opcode[103].pair_count[90] : 10
+opcode[103].pair_count[97] : 1
+opcode[103].pair_count[100] : 10
+opcode[103].pair_count[101] : 1
+opcode[103].pair_count[103] : 1
+opcode[103].pair_count[107] : 7
+opcode[103].pair_count[113] : 22
+opcode[103].pair_count[124] : 210
+opcode[103].pair_count[125] : 24
+opcode[103].pair_count[137] : 5
+opcode[103].pair_count[161] : 14
+opcode[103].pair_count[166] : 15
+    opcode[104].execution_count : 3
+opcode[104].pair_count[101] : 2
+opcode[104].pair_count[124] : 1
+    opcode[105].execution_count : 139
+opcode[105].pair_count[90] : 4
+opcode[105].pair_count[100] : 12
+opcode[105].pair_count[116] : 3
+opcode[105].pair_count[124] : 107
+opcode[105].pair_count[144] : 7
+opcode[105].pair_count[160] : 6
+opcode[106].specializable : 1
+    opcode[106].specialization.success : 103
+    opcode[106].specialization.failure : 92
+    opcode[106].specialization.hit : 1539
+    opcode[106].specialization.deferred : 603
+    opcode[106].specialization.miss : 309
+    opcode[106].specialization.deopt : 1
+    opcode[106].execution_count : 1245
+    opcode[106].specialization.failure_kinds[2] : 29
+    opcode[106].specialization.failure_kinds[4] : 7
+    opcode[106].specialization.failure_kinds[8] : 10
+    opcode[106].specialization.failure_kinds[13] : 16
+    opcode[106].specialization.failure_kinds[14] : 26
+    opcode[106].specialization.failure_kinds[17] : 4
+opcode[106].pair_count[35] : 46
+opcode[106].pair_count[39] : 112
+opcode[106].pair_count[53] : 14
+opcode[106].pair_count[59] : 36
+opcode[106].pair_count[60] : 14
+opcode[106].pair_count[68] : 8
+opcode[106].pair_count[83] : 21
+opcode[106].pair_count[90] : 15
+opcode[106].pair_count[100] : 112
+opcode[106].pair_count[101] : 8
+opcode[106].pair_count[103] : 10
+opcode[106].pair_count[106] : 48
+opcode[106].pair_count[107] : 3
+opcode[106].pair_count[112] : 2
+opcode[106].pair_count[114] : 24
+opcode[106].pair_count[115] : 6
+opcode[106].pair_count[116] : 19
+opcode[106].pair_count[118] : 67
+opcode[106].pair_count[124] : 262
+opcode[106].pair_count[125] : 74
+opcode[106].pair_count[128] : 28
+opcode[106].pair_count[129] : 54
+opcode[106].pair_count[143] : 30
+opcode[106].pair_count[155] : 2
+opcode[106].pair_count[160] : 120
+opcode[106].pair_count[161] : 19
+opcode[106].pair_count[166] : 84
+opcode[106].pair_count[172] : 7
+opcode[107].specializable : 1
+    opcode[107].specialization.success : 17
+    opcode[107].specialization.failure : 23
+    opcode[107].specialization.hit : 709
+    opcode[107].specialization.deferred : 79
+    opcode[107].specialization.miss : 3
+    opcode[107].execution_count : 196
+    opcode[107].specialization.failure_kinds[12] : 3
+    opcode[107].specialization.failure_kinds[14] : 7
+    opcode[107].specialization.failure_kinds[15] : 9
+    opcode[107].specialization.failure_kinds[16] : 3
+    opcode[107].specialization.failure_kinds[22] : 1
+opcode[107].pair_count[83] : 4
+opcode[107].pair_count[86] : 1
+opcode[107].pair_count[90] : 4
+opcode[107].pair_count[114] : 149
+opcode[107].pair_count[115] : 23
+opcode[107].pair_count[125] : 7
+opcode[107].pair_count[144] : 1
+opcode[107].pair_count[175] : 7
+    opcode[108].execution_count : 66
+opcode[108].pair_count[35] : 2
+opcode[108].pair_count[84] : 4
+opcode[108].pair_count[90] : 43
+opcode[108].pair_count[109] : 12
+opcode[108].pair_count[125] : 1
+opcode[108].pair_count[138] : 3
+    opcode[109].execution_count : 43
+opcode[109].pair_count[35] : 1
+opcode[109].pair_count[90] : 42
+    opcode[110].execution_count : 936
+opcode[110].pair_count[9] : 70
+opcode[110].pair_count[38] : 34
+opcode[110].pair_count[45] : 24
+opcode[110].pair_count[46] : 48
+opcode[110].pair_count[47] : 3
+opcode[110].pair_count[48] : 22
+opcode[110].pair_count[55] : 133
+opcode[110].pair_count[89] : 2
+opcode[110].pair_count[100] : 75
+opcode[110].pair_count[101] : 8
+opcode[110].pair_count[103] : 1
+opcode[110].pair_count[116] : 47
+opcode[110].pair_count[124] : 462
+opcode[110].pair_count[140] : 7
+    opcode[111].execution_count : 2
+opcode[111].pair_count[2] : 1
+opcode[111].pair_count[90] : 1
+    opcode[112].execution_count : 75
+opcode[112].pair_count[2] : 1
+opcode[112].pair_count[64] : 1
+opcode[112].pair_count[83] : 35
+opcode[112].pair_count[90] : 1
+opcode[112].pair_count[101] : 3
+opcode[112].pair_count[116] : 2
+opcode[112].pair_count[125] : 1
+opcode[112].pair_count[143] : 24
+opcode[112].pair_count[166] : 7
+    opcode[113].execution_count : 303
+opcode[113].pair_count[1] : 39
+opcode[113].pair_count[83] : 146
+opcode[113].pair_count[100] : 72
+opcode[113].pair_count[161] : 23
+opcode[113].pair_count[177] : 1
+opcode[113].pair_count[179] : 22
+    opcode[114].execution_count : 1605
+opcode[114].pair_count[1] : 113
+opcode[114].pair_count[2] : 30
+opcode[114].pair_count[9] : 91
+opcode[114].pair_count[38] : 99
+opcode[114].pair_count[44] : 28
+opcode[114].pair_count[45] : 4
+opcode[114].pair_count[46] : 24
+opcode[114].pair_count[47] : 20
+opcode[114].pair_count[48] : 33
+opcode[114].pair_count[55] : 171
+opcode[114].pair_count[89] : 1
+opcode[114].pair_count[100] : 195
+opcode[114].pair_count[101] : 41
+opcode[114].pair_count[103] : 9
+opcode[114].pair_count[110] : 25
+opcode[114].pair_count[116] : 178
+opcode[114].pair_count[124] : 519
+opcode[114].pair_count[125] : 2
+opcode[114].pair_count[137] : 9
+opcode[114].pair_count[140] : 12
+opcode[114].pair_count[144] : 1
+    opcode[115].execution_count : 519
+opcode[115].pair_count[2] : 10
+opcode[115].pair_count[9] : 8
+opcode[115].pair_count[45] : 4
+opcode[115].pair_count[46] : 4
+opcode[115].pair_count[47] : 13
+opcode[115].pair_count[48] : 133
+opcode[115].pair_count[55] : 75
+opcode[115].pair_count[100] : 4
+opcode[115].pair_count[101] : 24
+opcode[115].pair_count[103] : 1
+opcode[115].pair_count[116] : 91
+opcode[115].pair_count[119] : 4
+opcode[115].pair_count[124] : 148
+opcode[116].specializable : 1
+    opcode[116].specialization.success : 198
+    opcode[116].specialization.hit : 3586
+    opcode[116].specialization.miss : 397
+    opcode[116].execution_count : 2059
+opcode[116].pair_count[11] : 1
+opcode[116].pair_count[25] : 2
+opcode[116].pair_count[36] : 54
+opcode[116].pair_count[45] : 69
+opcode[116].pair_count[46] : 49
+opcode[116].pair_count[55] : 16
+opcode[116].pair_count[56] : 27
+opcode[116].pair_count[59] : 21
+opcode[116].pair_count[64] : 2
+opcode[116].pair_count[66] : 6
+opcode[116].pair_count[68] : 7
+opcode[116].pair_count[77] : 20
+opcode[116].pair_count[83] : 16
+opcode[116].pair_count[95] : 8
+opcode[116].pair_count[100] : 39
+opcode[116].pair_count[102] : 24
+opcode[116].pair_count[106] : 375
+opcode[116].pair_count[107] : 9
+opcode[116].pair_count[114] : 8
+opcode[116].pair_count[116] : 101
+opcode[116].pair_count[117] : 51
+opcode[116].pair_count[118] : 61
+opcode[116].pair_count[122] : 2
+opcode[116].pair_count[124] : 713
+opcode[116].pair_count[125] : 6
+opcode[116].pair_count[128] : 14
+opcode[116].pair_count[129] : 4
+opcode[116].pair_count[136] : 37
+opcode[116].pair_count[137] : 12
+opcode[116].pair_count[160] : 161
+opcode[116].pair_count[166] : 142
+opcode[116].pair_count[172] : 2
+    opcode[117].execution_count : 136
+opcode[117].pair_count[114] : 108
+opcode[117].pair_count[115] : 28
+    opcode[118].execution_count : 402
+opcode[118].pair_count[83] : 10
+opcode[118].pair_count[90] : 1
+opcode[118].pair_count[112] : 1
+opcode[118].pair_count[114] : 362
+opcode[118].pair_count[125] : 5
+opcode[118].pair_count[161] : 23
+    opcode[119].execution_count : 12
+opcode[119].pair_count[35] : 1
+opcode[119].pair_count[120] : 5
+    opcode[120].execution_count : 84
+opcode[120].pair_count[39] : 2
+opcode[120].pair_count[40] : 48
+opcode[120].pair_count[89] : 8
+opcode[120].pair_count[90] : 11
+opcode[120].pair_count[106] : 14
+opcode[120].pair_count[125] : 1
+    opcode[121].execution_count : 31
+opcode[121].pair_count[64] : 1
+opcode[121].pair_count[67] : 7
+opcode[121].pair_count[161] : 23
+opcode[122].specializable : 1
+    opcode[122].specialization.success : 10
+    opcode[122].specialization.failure : 17
+    opcode[122].specialization.hit : 344
+    opcode[122].specialization.deferred : 50
+    opcode[122].execution_count : 106
+    opcode[122].specialization.failure_kinds[11] : 17
+opcode[122].pair_count[1] : 4
+opcode[122].pair_count[90] : 5
+opcode[122].pair_count[99] : 14
+opcode[122].pair_count[100] : 27
+opcode[122].pair_count[107] : 16
+opcode[122].pair_count[112] : 1
+opcode[122].pair_count[114] : 7
+opcode[122].pair_count[116] : 3
+opcode[122].pair_count[122] : 2
+opcode[122].pair_count[124] : 7
+opcode[122].pair_count[125] : 16
+opcode[122].pair_count[166] : 4
+    opcode[124].execution_count : 9074
+opcode[124].pair_count[3] : 2
+opcode[124].pair_count[6] : 11
+opcode[124].pair_count[17] : 39
+opcode[124].pair_count[18] : 80
+opcode[124].pair_count[25] : 31
+opcode[124].pair_count[26] : 48
+opcode[124].pair_count[28] : 162
+opcode[124].pair_count[29] : 7
+opcode[124].pair_count[39] : 326
+opcode[124].pair_count[40] : 854
+opcode[124].pair_count[41] : 78
+opcode[124].pair_count[47] : 22
+opcode[124].pair_count[48] : 97
+opcode[124].pair_count[53] : 2
+opcode[124].pair_count[55] : 241
+opcode[124].pair_count[56] : 50
+opcode[124].pair_count[59] : 401
+opcode[124].pair_count[60] : 18
+opcode[124].pair_count[61] : 60
+opcode[124].pair_count[63] : 62
+opcode[124].pair_count[64] : 214
+opcode[124].pair_count[65] : 37
+opcode[124].pair_count[66] : 10
+opcode[124].pair_count[67] : 213
+opcode[124].pair_count[68] : 211
+opcode[124].pair_count[73] : 2
+opcode[124].pair_count[76] : 51
+opcode[124].pair_count[78] : 44
+opcode[124].pair_count[79] : 12
+opcode[124].pair_count[80] : 20
+opcode[124].pair_count[83] : 348
+opcode[124].pair_count[92] : 2
+opcode[124].pair_count[93] : 217
+opcode[124].pair_count[95] : 293
+opcode[124].pair_count[97] : 4
+opcode[124].pair_count[99] : 42
+opcode[124].pair_count[100] : 224
+opcode[124].pair_count[102] : 20
+opcode[124].pair_count[103] : 23
+opcode[124].pair_count[105] : 7
+opcode[124].pair_count[106] : 427
+opcode[124].pair_count[107] : 29
+opcode[124].pair_count[110] : 30
+opcode[124].pair_count[112] : 5
+opcode[124].pair_count[114] : 207
+opcode[124].pair_count[115] : 261
+opcode[124].pair_count[116] : 235
+opcode[124].pair_count[117] : 28
+opcode[124].pair_count[118] : 148
+opcode[124].pair_count[120] : 64
+opcode[124].pair_count[121] : 29
+opcode[124].pair_count[122] : 19
+opcode[124].pair_count[124] : 611
+opcode[124].pair_count[125] : 9
+opcode[124].pair_count[128] : 252
+opcode[124].pair_count[129] : 183
+opcode[124].pair_count[133] : 9
+opcode[124].pair_count[137] : 14
+opcode[124].pair_count[142] : 7
+opcode[124].pair_count[143] : 343
+opcode[124].pair_count[144] : 2
+opcode[124].pair_count[145] : 286
+opcode[124].pair_count[153] : 90
+opcode[124].pair_count[154] : 105
+opcode[124].pair_count[155] : 9
+opcode[124].pair_count[160] : 205
+opcode[124].pair_count[162] : 15
+opcode[124].pair_count[164] : 107
+opcode[124].pair_count[166] : 649
+opcode[124].pair_count[168] : 3
+opcode[124].pair_count[169] : 47
+opcode[124].pair_count[172] : 56
+opcode[124].pair_count[175] : 5
+    opcode[125].execution_count : 2038
+opcode[125].pair_count[1] : 2
+opcode[125].pair_count[2] : 91
+opcode[125].pair_count[9] : 181
+opcode[125].pair_count[38] : 13
+opcode[125].pair_count[44] : 29
+opcode[125].pair_count[47] : 21
+opcode[125].pair_count[48] : 116
+opcode[125].pair_count[55] : 271
+opcode[125].pair_count[89] : 40
+opcode[125].pair_count[100] : 158
+opcode[125].pair_count[110] : 419
+opcode[125].pair_count[116] : 213
+opcode[125].pair_count[124] : 382
+opcode[125].pair_count[125] : 50
+opcode[125].pair_count[126] : 2
+opcode[125].pair_count[136] : 1
+opcode[125].pair_count[137] : 41
+opcode[125].pair_count[140] : 8
+    opcode[126].execution_count : 2
+opcode[126].pair_count[100] : 2
+    opcode[127].execution_count : 8
+opcode[127].pair_count[64] : 8
+    opcode[128].execution_count : 753
+opcode[128].pair_count[1] : 40
+opcode[128].pair_count[2] : 2
+opcode[128].pair_count[9] : 83
+opcode[128].pair_count[38] : 12
+opcode[128].pair_count[47] : 12
+opcode[128].pair_count[48] : 6
+opcode[128].pair_count[55] : 118
+opcode[128].pair_count[100] : 54
+opcode[128].pair_count[116] : 67
+opcode[128].pair_count[124] : 359
+    opcode[129].execution_count : 352
+opcode[129].pair_count[2] : 3
+opcode[129].pair_count[9] : 17
+opcode[129].pair_count[38] : 46
+opcode[129].pair_count[47] : 8
+opcode[129].pair_count[48] : 39
+opcode[129].pair_count[55] : 80
+opcode[129].pair_count[100] : 7
+opcode[129].pair_count[110] : 4
+opcode[129].pair_count[116] : 57
+opcode[129].pair_count[124] : 89
+opcode[129].pair_count[140] : 2
+    opcode[130].execution_count : 14
+opcode[130].pair_count[35] : 5
+opcode[130].pair_count[120] : 2
+    opcode[132].execution_count : 930
+opcode[132].pair_count[47] : 1
+opcode[132].pair_count[55] : 23
+opcode[132].pair_count[90] : 484
+opcode[132].pair_count[100] : 86
+opcode[132].pair_count[101] : 2
+opcode[132].pair_count[116] : 9
+opcode[132].pair_count[124] : 182
+opcode[132].pair_count[125] : 49
+opcode[132].pair_count[138] : 1
+opcode[132].pair_count[166] : 93
+    opcode[133].execution_count : 153
+opcode[133].pair_count[17] : 89
+opcode[133].pair_count[25] : 63
+opcode[133].pair_count[60] : 1
+    opcode[135].execution_count : 70
+opcode[135].pair_count[135] : 9
+opcode[135].pair_count[150] : 26
+opcode[135].pair_count[151] : 35
+    opcode[136].execution_count : 104
+opcode[136].pair_count[102] : 82
+opcode[136].pair_count[120] : 5
+opcode[136].pair_count[136] : 17
+    opcode[137].execution_count : 228
+opcode[137].pair_count[39] : 1
+opcode[137].pair_count[41] : 1
+opcode[137].pair_count[44] : 24
+opcode[137].pair_count[45] : 24
+opcode[137].pair_count[46] : 12
+opcode[137].pair_count[47] : 1
+opcode[137].pair_count[55] : 8
+opcode[137].pair_count[56] : 1
+opcode[137].pair_count[59] : 27
+opcode[137].pair_count[68] : 3
+opcode[137].pair_count[83] : 2
+opcode[137].pair_count[100] : 13
+opcode[137].pair_count[102] : 25
+opcode[137].pair_count[106] : 4
+opcode[137].pair_count[114] : 3
+opcode[137].pair_count[116] : 3
+opcode[137].pair_count[124] : 39
+opcode[137].pair_count[125] : 1
+opcode[137].pair_count[160] : 3
+opcode[137].pair_count[162] : 5
+opcode[137].pair_count[166] : 19
+opcode[137].pair_count[176] : 9
+    opcode[138].execution_count : 31
+opcode[138].pair_count[116] : 1
+opcode[138].pair_count[124] : 3
+opcode[138].pair_count[125] : 6
+opcode[138].pair_count[136] : 3
+opcode[138].pair_count[137] : 9
+opcode[138].pair_count[161] : 9
+    opcode[140].execution_count : 109
+opcode[140].pair_count[9] : 1
+opcode[140].pair_count[93] : 106
+opcode[140].pair_count[144] : 2
+    opcode[141].execution_count : 10
+opcode[141].pair_count[124] : 10
+    opcode[142].execution_count : 123
+opcode[142].pair_count[83] : 80
+opcode[142].pair_count[90] : 1
+opcode[142].pair_count[103] : 1
+opcode[142].pair_count[125] : 40
+opcode[142].pair_count[166] : 1
+    opcode[143].execution_count : 1149
+opcode[143].pair_count[22] : 469
+opcode[143].pair_count[23] : 660
+opcode[143].pair_count[24] : 20
+    opcode[144].execution_count : 273
+opcode[144].pair_count[93] : 4
+opcode[144].pair_count[100] : 260
+opcode[144].pair_count[110] : 1
+opcode[144].pair_count[114] : 3
+opcode[144].pair_count[115] : 4
+opcode[144].pair_count[128] : 1
+    opcode[145].execution_count : 626
+opcode[145].pair_count[38] : 609
+opcode[145].pair_count[140] : 17
+    opcode[146].execution_count : 1
+opcode[146].pair_count[140] : 1
+    opcode[147].execution_count : 323
+opcode[147].pair_count[100] : 182
+opcode[147].pair_count[105] : 1
+opcode[147].pair_count[144] : 122
+opcode[147].pair_count[165] : 18
+    opcode[149].execution_count : 131
+opcode[149].pair_count[75] : 57
+opcode[149].pair_count[150] : 34
+opcode[149].pair_count[151] : 40
+    opcode[150].execution_count : 1879
+opcode[150].pair_count[1] : 57
+opcode[150].pair_count[2] : 92
+opcode[150].pair_count[9] : 20
+opcode[150].pair_count[44] : 18
+opcode[150].pair_count[45] : 30
+opcode[150].pair_count[46] : 55
+opcode[150].pair_count[47] : 1
+opcode[150].pair_count[48] : 113
+opcode[150].pair_count[55] : 873
+opcode[150].pair_count[100] : 100
+opcode[150].pair_count[103] : 162
+opcode[150].pair_count[124] : 358
+    opcode[151].execution_count : 872
+opcode[151].pair_count[1] : 10
+opcode[151].pair_count[2] : 32
+opcode[151].pair_count[9] : 27
+opcode[151].pair_count[44] : 1
+opcode[151].pair_count[45] : 2
+opcode[151].pair_count[46] : 3
+opcode[151].pair_count[47] : 30
+opcode[151].pair_count[100] : 85
+opcode[151].pair_count[101] : 87
+opcode[151].pair_count[103] : 21
+opcode[151].pair_count[104] : 1
+opcode[151].pair_count[116] : 281
+opcode[151].pair_count[124] : 282
+opcode[151].pair_count[136] : 7
+opcode[151].pair_count[137] : 3
+    opcode[153].execution_count : 220
+opcode[153].pair_count[38] : 12
+opcode[153].pair_count[110] : 120
+opcode[153].pair_count[124] : 19
+opcode[153].pair_count[153] : 34
+opcode[153].pair_count[154] : 35
+    opcode[154].execution_count : 623
+opcode[154].pair_count[9] : 46
+opcode[154].pair_count[44] : 144
+opcode[154].pair_count[46] : 114
+opcode[154].pair_count[47] : 4
+opcode[154].pair_count[48] : 6
+opcode[154].pair_count[55] : 23
+opcode[154].pair_count[100] : 83
+opcode[154].pair_count[103] : 28
+opcode[154].pair_count[110] : 21
+opcode[154].pair_count[124] : 154
+    opcode[155].execution_count : 26
+opcode[155].pair_count[100] : 14
+opcode[155].pair_count[101] : 1
+opcode[155].pair_count[124] : 4
+opcode[155].pair_count[157] : 7
+    opcode[156].execution_count : 44
+opcode[156].pair_count[83] : 15
+opcode[156].pair_count[100] : 13
+opcode[156].pair_count[125] : 15
+opcode[156].pair_count[165] : 1
+    opcode[157].execution_count : 14
+opcode[157].pair_count[83] : 1
+opcode[157].pair_count[90] : 4
+opcode[157].pair_count[101] : 2
+opcode[157].pair_count[103] : 1
+opcode[157].pair_count[124] : 1
+opcode[157].pair_count[125] : 2
+opcode[157].pair_count[146] : 1
+opcode[157].pair_count[166] : 2
+opcode[160].specializable : 1
+    opcode[160].specialization.success : 64
+    opcode[160].specialization.failure : 26
+    opcode[160].specialization.hit : 1555
+    opcode[160].specialization.deferred : 112
+    opcode[160].specialization.miss : 2
+    opcode[160].execution_count : 583
+    opcode[160].specialization.failure_kinds[1] : 3
+    opcode[160].specialization.failure_kinds[9] : 8
+    opcode[160].specialization.failure_kinds[17] : 5
+    opcode[160].specialization.failure_kinds[18] : 10
+opcode[160].pair_count[2] : 3
+opcode[160].pair_count[35] : 2
+opcode[160].pair_count[100] : 94
+opcode[160].pair_count[101] : 46
+opcode[160].pair_count[103] : 4
+opcode[160].pair_count[116] : 50
+opcode[160].pair_count[124] : 247
+opcode[160].pair_count[136] : 6
+opcode[160].pair_count[137] : 6
+opcode[160].pair_count[166] : 125
+    opcode[161].execution_count : 1397
+opcode[161].pair_count[39] : 11
+opcode[161].pair_count[40] : 24
+opcode[161].pair_count[45] : 8
+opcode[161].pair_count[47] : 6
+opcode[161].pair_count[55] : 94
+opcode[161].pair_count[56] : 25
+opcode[161].pair_count[59] : 103
+opcode[161].pair_count[68] : 85
+opcode[161].pair_count[100] : 349
+opcode[161].pair_count[102] : 21
+opcode[161].pair_count[114] : 51
+opcode[161].pair_count[124] : 62
+opcode[161].pair_count[125] : 11
+opcode[161].pair_count[128] : 147
+opcode[161].pair_count[129] : 24
+opcode[161].pair_count[137] : 22
+opcode[161].pair_count[161] : 25
+opcode[161].pair_count[175] : 329
+    opcode[162].execution_count : 31
+opcode[162].pair_count[82] : 21
+opcode[162].pair_count[90] : 6
+opcode[162].pair_count[166] : 4
+    opcode[164].execution_count : 110
+opcode[164].pair_count[142] : 110
+    opcode[165].execution_count : 19
+opcode[165].pair_count[90] : 1
+opcode[165].pair_count[100] : 1
+opcode[165].pair_count[105] : 17
+opcode[166].specializable : 1
+    opcode[166].specialization.success : 143
+    opcode[166].specialization.failure : 66
+    opcode[166].specialization.hit : 2911
+    opcode[166].specialization.deferred : 721
+    opcode[166].specialization.miss : 110
+    opcode[166].specialization.deopt : 1
+    opcode[166].execution_count : 1950
+    opcode[166].specialization.failure_kinds[0] : 1
+    opcode[166].specialization.failure_kinds[13] : 15
+    opcode[166].specialization.failure_kinds[14] : 5
+    opcode[166].specialization.failure_kinds[16] : 25
+    opcode[166].specialization.failure_kinds[19] : 13
+    opcode[166].specialization.failure_kinds[23] : 6
+    opcode[166].specialization.failure_kinds[24] : 1
+opcode[166].pair_count[22] : 110
+opcode[166].pair_count[171] : 1840
+    opcode[167].execution_count : 159
+opcode[167].pair_count[9] : 109
+opcode[167].pair_count[44] : 4
+opcode[167].pair_count[124] : 23
+opcode[167].pair_count[125] : 23
+    opcode[168].execution_count : 5
+opcode[168].pair_count[169] : 5
+    opcode[169].execution_count : 92
+opcode[169].pair_count[9] : 46
+opcode[169].pair_count[47] : 2
+opcode[169].pair_count[55] : 40
+opcode[169].pair_count[89] : 4
+opcode[171].specializable : 1
+    opcode[171].specialization.success : 51
+    opcode[171].specialization.failure : 225
+    opcode[171].specialization.hit : 615
+    opcode[171].specialization.deferred : 1249
+    opcode[171].specialization.miss : 218
+    opcode[171].specialization.deopt : 2
+    opcode[171].execution_count : 2058
+    opcode[171].specialization.failure_kinds[0] : 2
+    opcode[171].specialization.failure_kinds[9] : 52
+    opcode[171].specialization.failure_kinds[13] : 72
+    opcode[171].specialization.failure_kinds[18] : 16
+    opcode[171].specialization.failure_kinds[19] : 26
+    opcode[171].specialization.failure_kinds[20] : 32
+    opcode[171].specialization.failure_kinds[21] : 10
+    opcode[171].specialization.failure_kinds[25] : 15
+opcode[171].pair_count[1] : 172
+opcode[171].pair_count[35] : 15
+opcode[171].pair_count[53] : 21
+opcode[171].pair_count[68] : 12
+opcode[171].pair_count[75] : 4
+opcode[171].pair_count[83] : 76
+opcode[171].pair_count[86] : 6
+opcode[171].pair_count[90] : 218
+opcode[171].pair_count[92] : 8
+opcode[171].pair_count[99] : 7
+opcode[171].pair_count[100] : 48
+opcode[171].pair_count[102] : 1
+opcode[171].pair_count[106] : 7
+opcode[171].pair_count[107] : 2
+opcode[171].pair_count[112] : 10
+opcode[171].pair_count[114] : 118
+opcode[171].pair_count[115] : 42
+opcode[171].pair_count[116] : 16
+opcode[171].pair_count[118] : 7
+opcode[171].pair_count[120] : 2
+opcode[171].pair_count[122] : 2
+opcode[171].pair_count[124] : 42
+opcode[171].pair_count[125] : 181
+opcode[171].pair_count[128] : 28
+opcode[171].pair_count[130] : 8
+opcode[171].pair_count[135] : 23
+opcode[171].pair_count[138] : 12
+opcode[171].pair_count[144] : 2
+opcode[171].pair_count[145] : 5
+opcode[171].pair_count[149] : 80
+opcode[171].pair_count[150] : 377
+opcode[171].pair_count[151] : 431
+opcode[171].pair_count[160] : 2
+opcode[171].pair_count[164] : 3
+opcode[171].pair_count[166] : 62
+opcode[171].pair_count[175] : 8
+    opcode[172].execution_count : 217
+opcode[172].pair_count[64] : 22
+opcode[172].pair_count[143] : 126
+opcode[172].pair_count[166] : 69
+    opcode[175].execution_count : 351
+opcode[175].pair_count[93] : 9
+opcode[175].pair_count[124] : 342
+    opcode[176].execution_count : 9
+opcode[176].pair_count[100] : 1
+opcode[176].pair_count[116] : 8
+    opcode[177].execution_count : 5
+opcode[177].pair_count[179] : 1
+opcode[177].pair_count[180] : 4
+    opcode[179].execution_count : 23
+opcode[179].pair_count[167] : 23
+    opcode[180].execution_count : 145
+opcode[180].pair_count[138] : 9
+opcode[180].pair_count[167] : 136
+Calls to PyEval_EvalDefault: 864
+Calls to Python functions inlined: 1953
+Frames pushed: 2687
+Frame objects created: 97
+Object allocations from freelist: 4337
+Object frees to freelist: 5801
+Object allocations: 31868
+Object allocations to 512 bytes: 31276
+Object allocations to 4 kbytes: 484
+Object allocations over 4 kbytes: 108
+Object frees: 26715
+Object new values: 202
+Object materialize dict (on request): 0
+Object materialize dict (new key): 0
+Object materialize dict (too big): 0
+Object materialize dict (str subclass): 0
+Traceback (most recent call last):
+  File "/home/nlemmers/ImageRecognition/digits_recognition_cnn.py", line 2, in <module>
+    import tensorflow as tf
+ModuleNotFoundError: No module named 'tensorflow'
+opcode[93].specializable : 1
+opcode[0].pair_count[1] : 58
+opcode[0].pair_count[135] : 15
+opcode[0].pair_count[149] : 33
+opcode[0].pair_count[150] : 451
+opcode[0].pair_count[151] : 302
+    opcode[1].execution_count : 1613
+opcode[1].pair_count[2] : 56
+opcode[1].pair_count[9] : 132
+opcode[1].pair_count[38] : 96
+opcode[1].pair_count[44] : 21
+opcode[1].pair_count[46] : 113
+opcode[1].pair_count[47] : 4
+opcode[1].pair_count[48] : 1
+opcode[1].pair_count[55] : 58
+opcode[1].pair_count[83] : 100
+opcode[1].pair_count[89] : 57
+opcode[1].pair_count[91] : 3
+opcode[1].pair_count[100] : 409
+opcode[1].pair_count[101] : 31
+opcode[1].pair_count[105] : 1
+opcode[1].pair_count[110] : 180
+opcode[1].pair_count[116] : 52
+opcode[1].pair_count[124] : 194
+opcode[1].pair_count[140] : 47
+opcode[1].pair_count[150] : 49
+opcode[1].pair_count[151] : 9
+    opcode[2].execution_count : 508
+opcode[2].pair_count[46] : 129
+opcode[2].pair_count[47] : 2
+opcode[2].pair_count[48] : 33
+opcode[2].pair_count[71] : 86
+opcode[2].pair_count[100] : 4
+opcode[2].pair_count[101] : 157
+opcode[2].pair_count[116] : 17
+opcode[2].pair_count[124] : 37
+opcode[2].pair_count[137] : 43
+    opcode[3].execution_count : 77
+opcode[3].pair_count[3] : 17
+opcode[3].pair_count[5] : 2
+opcode[3].pair_count[6] : 6
+opcode[3].pair_count[7] : 1
+opcode[3].pair_count[16] : 1
+opcode[3].pair_count[26] : 9
+opcode[3].pair_count[28] : 7
+opcode[3].pair_count[100] : 9
+opcode[3].pair_count[114] : 8
+opcode[3].pair_count[124] : 17
+    opcode[5].execution_count : 49
+opcode[5].pair_count[99] : 25
+opcode[5].pair_count[100] : 24
+    opcode[6].execution_count : 258
+opcode[6].pair_count[1] : 1
+opcode[6].pair_count[3] : 1
+opcode[6].pair_count[7] : 11
+opcode[6].pair_count[64] : 1
+opcode[6].pair_count[124] : 109
+opcode[6].pair_count[125] : 27
+opcode[6].pair_count[143] : 108
+    opcode[7].execution_count : 12
+opcode[7].pair_count[38] : 12
+    opcode[9].execution_count : 976
+opcode[9].pair_count[2] : 18
+opcode[9].pair_count[9] : 74
+opcode[9].pair_count[46] : 50
+opcode[9].pair_count[47] : 14
+opcode[9].pair_count[48] : 2
+opcode[9].pair_count[55] : 303
+opcode[9].pair_count[100] : 43
+opcode[9].pair_count[101] : 2
+opcode[9].pair_count[116] : 108
+opcode[9].pair_count[124] : 362
+    opcode[11].execution_count : 1
+opcode[11].pair_count[100] : 1
+    opcode[16].execution_count : 25
+opcode[16].pair_count[99] : 25
+    opcode[17].execution_count : 458
+opcode[17].pair_count[17] : 37
+opcode[17].pair_count[18] : 7
+opcode[17].pair_count[20] : 1
+opcode[17].pair_count[21] : 4
+opcode[17].pair_count[64] : 3
+opcode[17].pair_count[100] : 286
+opcode[17].pair_count[102] : 24
+opcode[17].pair_count[124] : 1
+opcode[17].pair_count[128] : 34
+opcode[17].pair_count[137] : 24
+opcode[17].pair_count[143] : 21
+opcode[17].pair_count[161] : 16
+    opcode[18].execution_count : 101
+opcode[18].pair_count[35] : 25
+opcode[18].pair_count[46] : 8
+opcode[18].pair_count[64] : 13
+opcode[18].pair_count[113] : 29
+opcode[18].pair_count[125] : 26
+    opcode[20].execution_count : 23
+opcode[20].pair_count[3] : 1
+opcode[20].pair_count[6] : 22
+    opcode[21].execution_count : 72
+opcode[21].pair_count[83] : 23
+opcode[21].pair_count[125] : 49
+    opcode[22].execution_count : 1525
+opcode[22].pair_count[1] : 363
+opcode[22].pair_count[22] : 225
+opcode[22].pair_count[23] : 50
+opcode[22].pair_count[24] : 1
+opcode[22].pair_count[35] : 1
+opcode[22].pair_count[47] : 1
+opcode[22].pair_count[53] : 83
+opcode[22].pair_count[55] : 20
+opcode[22].pair_count[64] : 9
+opcode[22].pair_count[83] : 94
+opcode[22].pair_count[86] : 37
+opcode[22].pair_count[100] : 8
+opcode[22].pair_count[114] : 32
+opcode[22].pair_count[118] : 3
+opcode[22].pair_count[124] : 45
+opcode[22].pair_count[125] : 28
+opcode[22].pair_count[130] : 4
+opcode[22].pair_count[149] : 8
+opcode[22].pair_count[150] : 412
+opcode[22].pair_count[151] : 3
+opcode[22].pair_count[161] : 98
+    opcode[23].specialization.miss : 218
+    opcode[23].execution_count : 812
+opcode[23].pair_count[135] : 23
+opcode[23].pair_count[149] : 10
+opcode[23].pair_count[150] : 509
+opcode[23].pair_count[151] : 52
+opcode[23].pair_count[171] : 218
+    opcode[24].execution_count : 21
+opcode[24].pair_count[150] : 21
+opcode[25].specializable : 1
+    opcode[25].specialization.success : 12
+    opcode[25].specialization.failure : 37
+    opcode[25].specialization.hit : 196
+    opcode[25].specialization.deferred : 409
+    opcode[25].execution_count : 154
+    opcode[25].specialization.failure_kinds[0] : 5
+    opcode[25].specialization.failure_kinds[12] : 8
+    opcode[25].specialization.failure_kinds[13] : 9
+    opcode[25].specialization.failure_kinds[16] : 15
+opcode[25].pair_count[1] : 1
+opcode[25].pair_count[35] : 14
+opcode[25].pair_count[83] : 9
+opcode[25].pair_count[90] : 4
+opcode[25].pair_count[100] : 8
+opcode[25].pair_count[102] : 7
+opcode[25].pair_count[116] : 1
+opcode[25].pair_count[122] : 9
+opcode[25].pair_count[124] : 13
+opcode[25].pair_count[125] : 35
+opcode[25].pair_count[128] : 6
+opcode[25].pair_count[137] : 7
+opcode[25].pair_count[155] : 2
+opcode[25].pair_count[166] : 38
+    opcode[26].execution_count : 119
+opcode[26].pair_count[26] : 23
+opcode[26].pair_count[27] : 1
+opcode[26].pair_count[28] : 10
+opcode[26].pair_count[29] : 6
+opcode[26].pair_count[83] : 17
+opcode[26].pair_count[114] : 54
+opcode[26].pair_count[161] : 8
+    opcode[27].specialization.miss : 3
+    opcode[27].execution_count : 24
+opcode[27].pair_count[55] : 21
+opcode[27].pair_count[107] : 3
+    opcode[28].execution_count : 340
+opcode[28].pair_count[44] : 21
+opcode[28].pair_count[46] : 21
+opcode[28].pair_count[47] : 3
+opcode[28].pair_count[48] : 37
+opcode[28].pair_count[55] : 7
+opcode[28].pair_count[100] : 198
+opcode[28].pair_count[124] : 29
+opcode[28].pair_count[137] : 24
+    opcode[29].execution_count : 348
+opcode[29].pair_count[2] : 8
+opcode[29].pair_count[9] : 24
+opcode[29].pair_count[47] : 1
+opcode[29].pair_count[55] : 3
+opcode[29].pair_count[93] : 8
+opcode[29].pair_count[100] : 2
+opcode[29].pair_count[124] : 302
+    opcode[35].execution_count : 119
+opcode[35].pair_count[47] : 6
+opcode[35].pair_count[48] : 49
+opcode[35].pair_count[49] : 4
+opcode[35].pair_count[101] : 6
+opcode[35].pair_count[116] : 54
+    opcode[36].execution_count : 116
+opcode[36].pair_count[114] : 116
+    opcode[38].execution_count : 950
+opcode[38].pair_count[93] : 950
+    opcode[39].execution_count : 798
+opcode[39].pair_count[35] : 2
+opcode[39].pair_count[39] : 123
+opcode[39].pair_count[40] : 54
+opcode[39].pair_count[41] : 49
+opcode[39].pair_count[46] : 25
+opcode[39].pair_count[56] : 2
+opcode[39].pair_count[59] : 6
+opcode[39].pair_count[64] : 9
+opcode[39].pair_count[100] : 49
+opcode[39].pair_count[114] : 25
+opcode[39].pair_count[118] : 34
+opcode[39].pair_count[124] : 245
+opcode[39].pair_count[125] : 111
+opcode[39].pair_count[129] : 15
+opcode[39].pair_count[143] : 7
+opcode[39].pair_count[161] : 37
+opcode[39].pair_count[172] : 5
+    opcode[40].execution_count : 1024
+opcode[40].pair_count[26] : 2
+opcode[40].pair_count[27] : 23
+opcode[40].pair_count[46] : 109
+opcode[40].pair_count[47] : 1
+opcode[40].pair_count[53] : 50
+opcode[40].pair_count[55] : 3
+opcode[40].pair_count[56] : 29
+opcode[40].pair_count[59] : 26
+opcode[40].pair_count[63] : 58
+opcode[40].pair_count[64] : 5
+opcode[40].pair_count[68] : 25
+opcode[40].pair_count[80] : 20
+opcode[40].pair_count[83] : 60
+opcode[40].pair_count[100] : 167
+opcode[40].pair_count[103] : 8
+opcode[40].pair_count[112] : 25
+opcode[40].pair_count[114] : 32
+opcode[40].pair_count[124] : 76
+opcode[40].pair_count[128] : 81
+opcode[40].pair_count[129] : 65
+opcode[40].pair_count[143] : 64
+opcode[40].pair_count[161] : 53
+opcode[40].pair_count[168] : 2
+opcode[40].pair_count[169] : 40
+    opcode[41].specialization.miss : 309
+    opcode[41].execution_count : 824
+opcode[41].pair_count[39] : 90
+opcode[41].pair_count[46] : 8
+opcode[41].pair_count[47] : 1
+opcode[41].pair_count[48] : 7
+opcode[41].pair_count[56] : 6
+opcode[41].pair_count[58] : 47
+opcode[41].pair_count[59] : 24
+opcode[41].pair_count[64] : 3
+opcode[41].pair_count[68] : 2
+opcode[41].pair_count[106] : 309
+opcode[41].pair_count[115] : 2
+opcode[41].pair_count[118] : 30
+opcode[41].pair_count[124] : 270
+opcode[41].pair_count[125] : 1
+opcode[41].pair_count[129] : 7
+opcode[41].pair_count[161] : 17
+    opcode[44].execution_count : 437
+opcode[44].pair_count[3] : 1
+opcode[44].pair_count[6] : 3
+opcode[44].pair_count[39] : 1
+opcode[44].pair_count[40] : 20
+opcode[44].pair_count[64] : 1
+opcode[44].pair_count[100] : 109
+opcode[44].pair_count[124] : 8
+opcode[44].pair_count[133] : 24
+opcode[44].pair_count[143] : 7
+opcode[44].pair_count[153] : 31
+opcode[44].pair_count[154] : 231
+opcode[44].pair_count[172] : 1
+    opcode[45].execution_count : 381
+opcode[45].pair_count[3] : 17
+opcode[45].pair_count[5] : 23
+opcode[45].pair_count[17] : 2
+opcode[45].pair_count[18] : 14
+opcode[45].pair_count[26] : 3
+opcode[45].pair_count[29] : 28
+opcode[45].pair_count[64] : 7
+opcode[45].pair_count[67] : 37
+opcode[45].pair_count[73] : 23
+opcode[45].pair_count[100] : 169
+opcode[45].pair_count[118] : 24
+opcode[45].pair_count[124] : 13
+opcode[45].pair_count[143] : 13
+opcode[45].pair_count[156] : 8
+    opcode[46].execution_count : 1182
+opcode[46].pair_count[3] : 2
+opcode[46].pair_count[6] : 216
+opcode[46].pair_count[39] : 9
+opcode[46].pair_count[40] : 24
+opcode[46].pair_count[45] : 21
+opcode[46].pair_count[46] : 110
+opcode[46].pair_count[47] : 2
+opcode[46].pair_count[48] : 26
+opcode[46].pair_count[64] : 43
+opcode[46].pair_count[65] : 61
+opcode[46].pair_count[73] : 121
+opcode[46].pair_count[102] : 25
+opcode[46].pair_count[103] : 32
+opcode[46].pair_count[105] : 53
+opcode[46].pair_count[124] : 55
+opcode[46].pair_count[143] : 93
+opcode[46].pair_count[153] : 63
+opcode[46].pair_count[154] : 204
+opcode[46].pair_count[172] : 22
+    opcode[47].execution_count : 198
+opcode[47].pair_count[48] : 55
+opcode[47].pair_count[55] : 143
+    opcode[48].specialization.miss : 308
+    opcode[48].execution_count : 831
+opcode[48].pair_count[36] : 17
+opcode[48].pair_count[45] : 94
+opcode[48].pair_count[46] : 46
+opcode[48].pair_count[47] : 8
+opcode[48].pair_count[48] : 42
+opcode[48].pair_count[55] : 12
+opcode[48].pair_count[56] : 11
+opcode[48].pair_count[64] : 8
+opcode[48].pair_count[66] : 24
+opcode[48].pair_count[77] : 75
+opcode[48].pair_count[83] : 1
+opcode[48].pair_count[102] : 23
+opcode[48].pair_count[116] : 308
+opcode[48].pair_count[124] : 157
+opcode[48].pair_count[136] : 5
+    opcode[49].execution_count : 4
+opcode[49].pair_count[115] : 4
+    opcode[53].execution_count : 178
+opcode[53].pair_count[1] : 163
+opcode[53].pair_count[125] : 7
+opcode[53].pair_count[161] : 8
+    opcode[55].specialization.miss : 89
+    opcode[55].execution_count : 3152
+opcode[55].pair_count[26] : 8
+opcode[55].pair_count[39] : 73
+opcode[55].pair_count[41] : 696
+opcode[55].pair_count[44] : 22
+opcode[55].pair_count[45] : 44
+opcode[55].pair_count[46] : 174
+opcode[55].pair_count[47] : 4
+opcode[55].pair_count[55] : 25
+opcode[55].pair_count[56] : 23
+opcode[55].pair_count[58] : 486
+opcode[55].pair_count[59] : 174
+opcode[55].pair_count[64] : 82
+opcode[55].pair_count[68] : 24
+opcode[55].pair_count[77] : 7
+opcode[55].pair_count[80] : 368
+opcode[55].pair_count[100] : 23
+opcode[55].pair_count[102] : 8
+opcode[55].pair_count[114] : 1
+opcode[55].pair_count[116] : 89
+opcode[55].pair_count[117] : 57
+opcode[55].pair_count[118] : 18
+opcode[55].pair_count[124] : 665
+opcode[55].pair_count[127] : 7
+opcode[55].pair_count[128] : 32
+opcode[55].pair_count[137] : 9
+opcode[55].pair_count[141] : 9
+opcode[55].pair_count[143] : 24
+    opcode[56].execution_count : 202
+opcode[56].pair_count[45] : 38
+opcode[56].pair_count[46] : 11
+opcode[56].pair_count[56] : 26
+opcode[56].pair_count[58] : 22
+opcode[56].pair_count[59] : 30
+opcode[56].pair_count[63] : 12
+opcode[56].pair_count[64] : 1
+opcode[56].pair_count[80] : 7
+opcode[56].pair_count[124] : 55
+    opcode[58].execution_count : 555
+opcode[58].pair_count[44] : 125
+opcode[58].pair_count[45] : 3
+opcode[58].pair_count[46] : 31
+opcode[58].pair_count[47] : 1
+opcode[58].pair_count[48] : 7
+opcode[58].pair_count[64] : 308
+opcode[58].pair_count[124] : 80
+    opcode[59].execution_count : 870
+opcode[59].pair_count[47] : 4
+opcode[59].pair_count[48] : 7
+opcode[59].pair_count[55] : 369
+opcode[59].pair_count[64] : 3
+opcode[59].pair_count[80] : 2
+opcode[59].pair_count[81] : 22
+opcode[59].pair_count[100] : 242
+opcode[59].pair_count[124] : 212
+opcode[59].pair_count[136] : 9
+opcode[60].specializable : 1
+    opcode[60].specialization.success : 5
+    opcode[60].specialization.hit : 92
+    opcode[60].execution_count : 47
+opcode[60].pair_count[9] : 16
+opcode[60].pair_count[89] : 2
+opcode[60].pair_count[100] : 3
+opcode[60].pair_count[101] : 11
+opcode[60].pair_count[116] : 14
+opcode[60].pair_count[124] : 1
+    opcode[61].execution_count : 60
+opcode[61].pair_count[47] : 1
+opcode[61].pair_count[55] : 20
+opcode[61].pair_count[100] : 32
+opcode[61].pair_count[116] : 7
+    opcode[63].specialization.miss : 2
+    opcode[63].execution_count : 132
+opcode[63].pair_count[46] : 34
+opcode[63].pair_count[64] : 3
+opcode[63].pair_count[124] : 50
+opcode[63].pair_count[143] : 43
+opcode[63].pair_count[160] : 2
+    opcode[64].execution_count : 930
+opcode[64].pair_count[22] : 717
+opcode[64].pair_count[23] : 4
+opcode[64].pair_count[64] : 66
+opcode[64].pair_count[65] : 6
+opcode[64].pair_count[66] : 4
+opcode[64].pair_count[67] : 10
+opcode[64].pair_count[73] : 20
+opcode[64].pair_count[76] : 3
+opcode[64].pair_count[77] : 6
+opcode[64].pair_count[78] : 2
+opcode[64].pair_count[79] : 3
+opcode[64].pair_count[80] : 7
+opcode[64].pair_count[81] : 2
+opcode[64].pair_count[113] : 10
+opcode[64].pair_count[121] : 2
+opcode[64].pair_count[127] : 1
+opcode[64].pair_count[141] : 1
+opcode[64].pair_count[143] : 66
+    opcode[65].specialization.miss : 72
+    opcode[65].execution_count : 174
+opcode[65].pair_count[22] : 4
+opcode[65].pair_count[23] : 98
+opcode[65].pair_count[166] : 72
+    opcode[66].execution_count : 44
+opcode[66].pair_count[39] : 25
+opcode[66].pair_count[68] : 11
+opcode[66].pair_count[124] : 8
+    opcode[67].specialization.miss : 38
+    opcode[67].execution_count : 267
+opcode[67].pair_count[35] : 5
+opcode[67].pair_count[53] : 8
+opcode[67].pair_count[83] : 66
+opcode[67].pair_count[112] : 27
+opcode[67].pair_count[125] : 123
+opcode[67].pair_count[166] : 38
+    opcode[68].execution_count : 407
+opcode[68].pair_count[64] : 3
+opcode[68].pair_count[93] : 188
+opcode[68].pair_count[143] : 175
+opcode[68].pair_count[144] : 2
+opcode[68].pair_count[166] : 39
+    opcode[71].execution_count : 86
+opcode[71].pair_count[100] : 86
+    opcode[73].execution_count : 356
+opcode[73].pair_count[1] : 39
+opcode[73].pair_count[64] : 2
+opcode[73].pair_count[73] : 26
+opcode[73].pair_count[83] : 64
+opcode[73].pair_count[114] : 74
+opcode[73].pair_count[115] : 21
+opcode[73].pair_count[128] : 130
+    opcode[75].execution_count : 61
+opcode[75].pair_count[64] : 25
+opcode[75].pair_count[90] : 2
+opcode[75].pair_count[113] : 8
+opcode[75].pair_count[166] : 26
+    opcode[76].execution_count : 54
+opcode[76].pair_count[1] : 25
+opcode[76].pair_count[114] : 21
+opcode[76].pair_count[125] : 8
+    opcode[77].execution_count : 115
+opcode[77].pair_count[114] : 90
+opcode[77].pair_count[115] : 25
+    opcode[78].execution_count : 46
+opcode[78].pair_count[100] : 46
+    opcode[79].execution_count : 16
+opcode[79].pair_count[9] : 3
+opcode[79].pair_count[100] : 11
+opcode[79].pair_count[124] : 2
+    opcode[80].execution_count : 424
+opcode[80].pair_count[1] : 3
+opcode[80].pair_count[99] : 8
+opcode[80].pair_count[124] : 21
+opcode[80].pair_count[145] : 329
+opcode[80].pair_count[161] : 63
+    opcode[81].execution_count : 24
+opcode[81].pair_count[114] : 11
+opcode[81].pair_count[115] : 13
+    opcode[82].execution_count : 21
+opcode[82].pair_count[105] : 15
+opcode[82].pair_count[142] : 6
+    opcode[83].execution_count : 2655
+opcode[83].pair_count[1] : 452
+opcode[83].pair_count[25] : 4
+opcode[83].pair_count[39] : 25
+opcode[83].pair_count[45] : 16
+opcode[83].pair_count[64] : 1
+opcode[83].pair_count[68] : 1
+opcode[83].pair_count[83] : 196
+opcode[83].pair_count[90] : 35
+opcode[83].pair_count[92] : 18
+opcode[83].pair_count[97] : 3
+opcode[83].pair_count[99] : 46
+opcode[83].pair_count[100] : 1
+opcode[83].pair_count[102] : 6
+opcode[83].pair_count[106] : 2
+opcode[83].pair_count[113] : 144
+opcode[83].pair_count[114] : 57
+opcode[83].pair_count[115] : 63
+opcode[83].pair_count[116] : 1
+opcode[83].pair_count[124] : 89
+opcode[83].pair_count[125] : 508
+opcode[83].pair_count[144] : 1
+opcode[83].pair_count[145] : 6
+opcode[83].pair_count[161] : 164
+opcode[83].pair_count[166] : 15
+opcode[83].pair_count[175] : 2
+opcode[83].pair_count[177] : 1
+opcode[83].pair_count[180] : 22
+    opcode[84].execution_count : 4
+opcode[84].pair_count[9] : 1
+opcode[84].pair_count[100] : 1
+opcode[84].pair_count[103] : 1
+opcode[84].pair_count[110] : 1
+    opcode[86].execution_count : 69
+    opcode[89].execution_count : 119
+opcode[89].pair_count[38] : 15
+opcode[89].pair_count[83] : 3
+opcode[89].pair_count[100] : 13
+opcode[89].pair_count[110] : 68
+opcode[89].pair_count[119] : 8
+opcode[89].pair_count[140] : 12
+    opcode[90].execution_count : 1323
+opcode[90].pair_count[1] : 11
+opcode[90].pair_count[2] : 133
+opcode[90].pair_count[9] : 12
+opcode[90].pair_count[83] : 5
+opcode[90].pair_count[89] : 1
+opcode[90].pair_count[90] : 7
+opcode[90].pair_count[91] : 6
+opcode[90].pair_count[100] : 872
+opcode[90].pair_count[101] : 217
+opcode[90].pair_count[103] : 4
+opcode[90].pair_count[105] : 4
+opcode[90].pair_count[109] : 31
+opcode[90].pair_count[110] : 8
+opcode[90].pair_count[136] : 11
+opcode[90].pair_count[144] : 1
+    opcode[91].execution_count : 13
+opcode[91].pair_count[2] : 2
+opcode[91].pair_count[9] : 1
+opcode[91].pair_count[91] : 3
+opcode[91].pair_count[100] : 5
+opcode[91].pair_count[103] : 1
+opcode[91].pair_count[110] : 1
+opcode[92].specializable : 1
+    opcode[92].specialization.success : 5
+    opcode[92].specialization.hit : 168
+    opcode[92].execution_count : 46
+opcode[92].pair_count[90] : 1
+opcode[92].pair_count[125] : 39
+opcode[92].pair_count[138] : 6
+    opcode[93].specialization.failure : 1482
+    opcode[93].execution_count : 1482
+    opcode[93].specialization.failure_kinds[0] : 116
+    opcode[93].specialization.failure_kinds[13] : 630
+    opcode[93].specialization.failure_kinds[14] : 697
+    opcode[93].specialization.failure_kinds[15] : 32
+    opcode[93].specialization.failure_kinds[21] : 5
+    opcode[93].specialization.failure_kinds[23] : 2
+opcode[93].pair_count[2] : 1
+opcode[93].pair_count[38] : 2
+opcode[93].pair_count[46] : 4
+opcode[93].pair_count[47] : 1
+opcode[93].pair_count[55] : 2
+opcode[93].pair_count[83] : 159
+opcode[93].pair_count[90] : 12
+opcode[93].pair_count[91] : 1
+opcode[93].pair_count[92] : 18
+opcode[93].pair_count[100] : 82
+opcode[93].pair_count[101] : 3
+opcode[93].pair_count[110] : 17
+opcode[93].pair_count[116] : 1
+opcode[93].pair_count[124] : 28
+opcode[93].pair_count[125] : 297
+opcode[93].pair_count[140] : 2
+opcode[93].pair_count[161] : 730
+opcode[93].pair_count[177] : 3
+opcode[93].pair_count[180] : 119
+opcode[95].specializable : 1
+    opcode[95].specialization.success : 35
+    opcode[95].specialization.failure : 34
+    opcode[95].specialization.hit : 623
+    opcode[95].specialization.deferred : 151
+    opcode[95].execution_count : 317
+    opcode[95].specialization.failure_kinds[2] : 30
+    opcode[95].specialization.failure_kinds[17] : 4
+opcode[95].pair_count[9] : 14
+opcode[95].pair_count[89] : 1
+opcode[95].pair_count[100] : 102
+opcode[95].pair_count[103] : 8
+opcode[95].pair_count[110] : 37
+opcode[95].pair_count[116] : 12
+opcode[95].pair_count[124] : 139
+opcode[95].pair_count[136] : 3
+opcode[95].pair_count[140] : 1
+    opcode[97].execution_count : 16
+opcode[97].pair_count[100] : 10
+opcode[97].pair_count[116] : 4
+opcode[97].pair_count[124] : 2
+    opcode[99].execution_count : 167
+opcode[99].pair_count[1] : 60
+opcode[99].pair_count[89] : 3
+opcode[99].pair_count[95] : 14
+opcode[99].pair_count[100] : 40
+opcode[99].pair_count[153] : 2
+opcode[99].pair_count[154] : 48
+    opcode[100].execution_count : 6574
+opcode[100].pair_count[3] : 36
+opcode[100].pair_count[5] : 24
+opcode[100].pair_count[16] : 24
+opcode[100].pair_count[17] : 291
+opcode[100].pair_count[20] : 22
+opcode[100].pair_count[21] : 68
+opcode[100].pair_count[25] : 52
+opcode[100].pair_count[26] : 18
+opcode[100].pair_count[28] : 161
+opcode[100].pair_count[29] : 307
+opcode[100].pair_count[56] : 2
+opcode[100].pair_count[59] : 22
+opcode[100].pair_count[60] : 14
+opcode[100].pair_count[64] : 84
+opcode[100].pair_count[65] : 70
+opcode[100].pair_count[68] : 11
+opcode[100].pair_count[73] : 164
+opcode[100].pair_count[79] : 1
+opcode[100].pair_count[83] : 1062
+opcode[100].pair_count[90] : 305
+opcode[100].pair_count[97] : 8
+opcode[100].pair_count[100] : 876
+opcode[100].pair_count[101] : 77
+opcode[100].pair_count[102] : 26
+opcode[100].pair_count[103] : 11
+opcode[100].pair_count[105] : 3
+opcode[100].pair_count[106] : 3
+opcode[100].pair_count[107] : 125
+opcode[100].pair_count[108] : 66
+opcode[100].pair_count[110] : 4
+opcode[100].pair_count[113] : 90
+opcode[100].pair_count[116] : 7
+opcode[100].pair_count[118] : 8
+opcode[100].pair_count[120] : 4
+opcode[100].pair_count[122] : 68
+opcode[100].pair_count[124] : 151
+opcode[100].pair_count[125] : 252
+opcode[100].pair_count[130] : 2
+opcode[100].pair_count[132] : 930
+opcode[100].pair_count[133] : 120
+opcode[100].pair_count[136] : 4
+opcode[100].pair_count[143] : 5
+opcode[100].pair_count[144] : 130
+opcode[100].pair_count[147] : 323
+opcode[100].pair_count[156] : 36
+opcode[100].pair_count[157] : 7
+opcode[100].pair_count[160] : 11
+opcode[100].pair_count[161] : 67
+opcode[100].pair_count[162] : 10
+opcode[100].pair_count[166] : 297
+opcode[100].pair_count[172] : 115
+    opcode[101].execution_count : 853
+opcode[101].pair_count[2] : 25
+opcode[101].pair_count[25] : 2
+opcode[101].pair_count[36] : 7
+opcode[101].pair_count[68] : 3
+opcode[101].pair_count[90] : 104
+opcode[101].pair_count[95] : 2
+opcode[101].pair_count[100] : 207
+opcode[101].pair_count[101] : 102
+opcode[101].pair_count[102] : 8
+opcode[101].pair_count[103] : 3
+opcode[101].pair_count[104] : 2
+opcode[101].pair_count[105] : 6
+opcode[101].pair_count[106] : 56
+opcode[101].pair_count[107] : 2
+opcode[101].pair_count[111] : 2
+opcode[101].pair_count[112] : 4
+opcode[101].pair_count[114] : 44
+opcode[101].pair_count[115] : 27
+opcode[101].pair_count[118] : 2
+opcode[101].pair_count[120] : 2
+opcode[101].pair_count[122] : 4
+opcode[101].pair_count[136] : 1
+opcode[101].pair_count[144] : 2
+opcode[101].pair_count[155] : 13
+opcode[101].pair_count[160] : 73
+opcode[101].pair_count[162] : 1
+opcode[101].pair_count[166] : 140
+opcode[101].pair_count[172] : 9
+    opcode[102].execution_count : 311
+opcode[102].pair_count[36] : 38
+opcode[102].pair_count[64] : 1
+opcode[102].pair_count[68] : 4
+opcode[102].pair_count[77] : 7
+opcode[102].pair_count[83] : 41
+opcode[102].pair_count[86] : 25
+opcode[102].pair_count[90] : 2
+opcode[102].pair_count[100] : 116
+opcode[102].pair_count[101] : 22
+opcode[102].pair_count[102] : 11
+opcode[102].pair_count[105] : 32
+opcode[102].pair_count[125] : 3
+opcode[102].pair_count[166] : 9
+    opcode[103].execution_count : 330
+opcode[103].pair_count[26] : 8
+opcode[103].pair_count[64] : 1
+opcode[103].pair_count[83] : 1
+opcode[103].pair_count[90] : 10
+opcode[103].pair_count[97] : 1
+opcode[103].pair_count[100] : 10
+opcode[103].pair_count[101] : 1
+opcode[103].pair_count[103] : 1
+opcode[103].pair_count[107] : 7
+opcode[103].pair_count[113] : 22
+opcode[103].pair_count[124] : 210
+opcode[103].pair_count[125] : 24
+opcode[103].pair_count[137] : 5
+opcode[103].pair_count[161] : 14
+opcode[103].pair_count[166] : 15
+    opcode[104].execution_count : 3
+opcode[104].pair_count[101] : 2
+opcode[104].pair_count[124] : 1
+    opcode[105].execution_count : 139
+opcode[105].pair_count[90] : 4
+opcode[105].pair_count[100] : 12
+opcode[105].pair_count[116] : 3
+opcode[105].pair_count[124] : 107
+opcode[105].pair_count[144] : 7
+opcode[105].pair_count[160] : 6
+opcode[106].specializable : 1
+    opcode[106].specialization.success : 103
+    opcode[106].specialization.failure : 92
+    opcode[106].specialization.hit : 1539
+    opcode[106].specialization.deferred : 603
+    opcode[106].specialization.miss : 309
+    opcode[106].specialization.deopt : 1
+    opcode[106].execution_count : 1245
+    opcode[106].specialization.failure_kinds[2] : 29
+    opcode[106].specialization.failure_kinds[4] : 7
+    opcode[106].specialization.failure_kinds[8] : 10
+    opcode[106].specialization.failure_kinds[13] : 16
+    opcode[106].specialization.failure_kinds[14] : 26
+    opcode[106].specialization.failure_kinds[17] : 4
+opcode[106].pair_count[35] : 46
+opcode[106].pair_count[39] : 112
+opcode[106].pair_count[53] : 14
+opcode[106].pair_count[59] : 36
+opcode[106].pair_count[60] : 14
+opcode[106].pair_count[68] : 8
+opcode[106].pair_count[83] : 21
+opcode[106].pair_count[90] : 15
+opcode[106].pair_count[100] : 112
+opcode[106].pair_count[101] : 8
+opcode[106].pair_count[103] : 10
+opcode[106].pair_count[106] : 48
+opcode[106].pair_count[107] : 3
+opcode[106].pair_count[112] : 2
+opcode[106].pair_count[114] : 24
+opcode[106].pair_count[115] : 6
+opcode[106].pair_count[116] : 19
+opcode[106].pair_count[118] : 67
+opcode[106].pair_count[124] : 262
+opcode[106].pair_count[125] : 74
+opcode[106].pair_count[128] : 28
+opcode[106].pair_count[129] : 54
+opcode[106].pair_count[143] : 30
+opcode[106].pair_count[155] : 2
+opcode[106].pair_count[160] : 120
+opcode[106].pair_count[161] : 19
+opcode[106].pair_count[166] : 84
+opcode[106].pair_count[172] : 7
+opcode[107].specializable : 1
+    opcode[107].specialization.success : 17
+    opcode[107].specialization.failure : 23
+    opcode[107].specialization.hit : 709
+    opcode[107].specialization.deferred : 79
+    opcode[107].specialization.miss : 3
+    opcode[107].execution_count : 196
+    opcode[107].specialization.failure_kinds[12] : 3
+    opcode[107].specialization.failure_kinds[14] : 7
+    opcode[107].specialization.failure_kinds[15] : 9
+    opcode[107].specialization.failure_kinds[16] : 3
+    opcode[107].specialization.failure_kinds[22] : 1
+opcode[107].pair_count[83] : 4
+opcode[107].pair_count[86] : 1
+opcode[107].pair_count[90] : 4
+opcode[107].pair_count[114] : 149
+opcode[107].pair_count[115] : 23
+opcode[107].pair_count[125] : 7
+opcode[107].pair_count[144] : 1
+opcode[107].pair_count[175] : 7
+    opcode[108].execution_count : 66
+opcode[108].pair_count[35] : 2
+opcode[108].pair_count[84] : 4
+opcode[108].pair_count[90] : 43
+opcode[108].pair_count[109] : 12
+opcode[108].pair_count[125] : 1
+opcode[108].pair_count[138] : 3
+    opcode[109].execution_count : 43
+opcode[109].pair_count[35] : 1
+opcode[109].pair_count[90] : 42
+    opcode[110].execution_count : 936
+opcode[110].pair_count[9] : 70
+opcode[110].pair_count[38] : 34
+opcode[110].pair_count[45] : 24
+opcode[110].pair_count[46] : 48
+opcode[110].pair_count[47] : 3
+opcode[110].pair_count[48] : 22
+opcode[110].pair_count[55] : 133
+opcode[110].pair_count[89] : 2
+opcode[110].pair_count[100] : 75
+opcode[110].pair_count[101] : 8
+opcode[110].pair_count[103] : 1
+opcode[110].pair_count[116] : 47
+opcode[110].pair_count[124] : 462
+opcode[110].pair_count[140] : 7
+    opcode[111].execution_count : 2
+opcode[111].pair_count[2] : 1
+opcode[111].pair_count[90] : 1
+    opcode[112].execution_count : 75
+opcode[112].pair_count[2] : 1
+opcode[112].pair_count[64] : 1
+opcode[112].pair_count[83] : 35
+opcode[112].pair_count[90] : 1
+opcode[112].pair_count[101] : 3
+opcode[112].pair_count[116] : 2
+opcode[112].pair_count[125] : 1
+opcode[112].pair_count[143] : 24
+opcode[112].pair_count[166] : 7
+    opcode[113].execution_count : 303
+opcode[113].pair_count[1] : 39
+opcode[113].pair_count[83] : 146
+opcode[113].pair_count[100] : 72
+opcode[113].pair_count[161] : 23
+opcode[113].pair_count[177] : 1
+opcode[113].pair_count[179] : 22
+    opcode[114].execution_count : 1605
+opcode[114].pair_count[1] : 113
+opcode[114].pair_count[2] : 30
+opcode[114].pair_count[9] : 91
+opcode[114].pair_count[38] : 99
+opcode[114].pair_count[44] : 28
+opcode[114].pair_count[45] : 4
+opcode[114].pair_count[46] : 24
+opcode[114].pair_count[47] : 20
+opcode[114].pair_count[48] : 33
+opcode[114].pair_count[55] : 171
+opcode[114].pair_count[89] : 1
+opcode[114].pair_count[100] : 195
+opcode[114].pair_count[101] : 41
+opcode[114].pair_count[103] : 9
+opcode[114].pair_count[110] : 25
+opcode[114].pair_count[116] : 178
+opcode[114].pair_count[124] : 519
+opcode[114].pair_count[125] : 2
+opcode[114].pair_count[137] : 9
+opcode[114].pair_count[140] : 12
+opcode[114].pair_count[144] : 1
+    opcode[115].execution_count : 519
+opcode[115].pair_count[2] : 10
+opcode[115].pair_count[9] : 8
+opcode[115].pair_count[45] : 4
+opcode[115].pair_count[46] : 4
+opcode[115].pair_count[47] : 13
+opcode[115].pair_count[48] : 133
+opcode[115].pair_count[55] : 75
+opcode[115].pair_count[100] : 4
+opcode[115].pair_count[101] : 24
+opcode[115].pair_count[103] : 1
+opcode[115].pair_count[116] : 91
+opcode[115].pair_count[119] : 4
+opcode[115].pair_count[124] : 148
+opcode[116].specializable : 1
+    opcode[116].specialization.success : 198
+    opcode[116].specialization.hit : 3586
+    opcode[116].specialization.miss : 397
+    opcode[116].execution_count : 2059
+opcode[116].pair_count[11] : 1
+opcode[116].pair_count[25] : 2
+opcode[116].pair_count[36] : 54
+opcode[116].pair_count[45] : 69
+opcode[116].pair_count[46] : 49
+opcode[116].pair_count[55] : 16
+opcode[116].pair_count[56] : 27
+opcode[116].pair_count[59] : 21
+opcode[116].pair_count[64] : 2
+opcode[116].pair_count[66] : 6
+opcode[116].pair_count[68] : 7
+opcode[116].pair_count[77] : 20
+opcode[116].pair_count[83] : 16
+opcode[116].pair_count[95] : 8
+opcode[116].pair_count[100] : 39
+opcode[116].pair_count[102] : 24
+opcode[116].pair_count[106] : 375
+opcode[116].pair_count[107] : 9
+opcode[116].pair_count[114] : 8
+opcode[116].pair_count[116] : 101
+opcode[116].pair_count[117] : 51
+opcode[116].pair_count[118] : 61
+opcode[116].pair_count[122] : 2
+opcode[116].pair_count[124] : 713
+opcode[116].pair_count[125] : 6
+opcode[116].pair_count[128] : 14
+opcode[116].pair_count[129] : 4
+opcode[116].pair_count[136] : 37
+opcode[116].pair_count[137] : 12
+opcode[116].pair_count[160] : 161
+opcode[116].pair_count[166] : 142
+opcode[116].pair_count[172] : 2
+    opcode[117].execution_count : 136
+opcode[117].pair_count[114] : 108
+opcode[117].pair_count[115] : 28
+    opcode[118].execution_count : 402
+opcode[118].pair_count[83] : 10
+opcode[118].pair_count[90] : 1
+opcode[118].pair_count[112] : 1
+opcode[118].pair_count[114] : 362
+opcode[118].pair_count[125] : 5
+opcode[118].pair_count[161] : 23
+    opcode[119].execution_count : 12
+opcode[119].pair_count[35] : 1
+opcode[119].pair_count[120] : 5
+    opcode[120].execution_count : 84
+opcode[120].pair_count[39] : 2
+opcode[120].pair_count[40] : 48
+opcode[120].pair_count[89] : 8
+opcode[120].pair_count[90] : 11
+opcode[120].pair_count[106] : 14
+opcode[120].pair_count[125] : 1
+    opcode[121].execution_count : 31
+opcode[121].pair_count[64] : 1
+opcode[121].pair_count[67] : 7
+opcode[121].pair_count[161] : 23
+opcode[122].specializable : 1
+    opcode[122].specialization.success : 10
+    opcode[122].specialization.failure : 17
+    opcode[122].specialization.hit : 344
+    opcode[122].specialization.deferred : 50
+    opcode[122].execution_count : 106
+    opcode[122].specialization.failure_kinds[11] : 17
+opcode[122].pair_count[1] : 4
+opcode[122].pair_count[90] : 5
+opcode[122].pair_count[99] : 14
+opcode[122].pair_count[100] : 27
+opcode[122].pair_count[107] : 16
+opcode[122].pair_count[112] : 1
+opcode[122].pair_count[114] : 7
+opcode[122].pair_count[116] : 3
+opcode[122].pair_count[122] : 2
+opcode[122].pair_count[124] : 7
+opcode[122].pair_count[125] : 16
+opcode[122].pair_count[166] : 4
+    opcode[124].execution_count : 9074
+opcode[124].pair_count[3] : 2
+opcode[124].pair_count[6] : 11
+opcode[124].pair_count[17] : 39
+opcode[124].pair_count[18] : 80
+opcode[124].pair_count[25] : 31
+opcode[124].pair_count[26] : 48
+opcode[124].pair_count[28] : 162
+opcode[124].pair_count[29] : 7
+opcode[124].pair_count[39] : 326
+opcode[124].pair_count[40] : 854
+opcode[124].pair_count[41] : 78
+opcode[124].pair_count[47] : 22
+opcode[124].pair_count[48] : 97
+opcode[124].pair_count[53] : 2
+opcode[124].pair_count[55] : 241
+opcode[124].pair_count[56] : 50
+opcode[124].pair_count[59] : 401
+opcode[124].pair_count[60] : 18
+opcode[124].pair_count[61] : 60
+opcode[124].pair_count[63] : 62
+opcode[124].pair_count[64] : 214
+opcode[124].pair_count[65] : 37
+opcode[124].pair_count[66] : 10
+opcode[124].pair_count[67] : 213
+opcode[124].pair_count[68] : 211
+opcode[124].pair_count[73] : 2
+opcode[124].pair_count[76] : 51
+opcode[124].pair_count[78] : 44
+opcode[124].pair_count[79] : 12
+opcode[124].pair_count[80] : 20
+opcode[124].pair_count[83] : 348
+opcode[124].pair_count[92] : 2
+opcode[124].pair_count[93] : 217
+opcode[124].pair_count[95] : 293
+opcode[124].pair_count[97] : 4
+opcode[124].pair_count[99] : 42
+opcode[124].pair_count[100] : 224
+opcode[124].pair_count[102] : 20
+opcode[124].pair_count[103] : 23
+opcode[124].pair_count[105] : 7
+opcode[124].pair_count[106] : 427
+opcode[124].pair_count[107] : 29
+opcode[124].pair_count[110] : 30
+opcode[124].pair_count[112] : 5
+opcode[124].pair_count[114] : 207
+opcode[124].pair_count[115] : 261
+opcode[124].pair_count[116] : 235
+opcode[124].pair_count[117] : 28
+opcode[124].pair_count[118] : 148
+opcode[124].pair_count[120] : 64
+opcode[124].pair_count[121] : 29
+opcode[124].pair_count[122] : 19
+opcode[124].pair_count[124] : 611
+opcode[124].pair_count[125] : 9
+opcode[124].pair_count[128] : 252
+opcode[124].pair_count[129] : 183
+opcode[124].pair_count[133] : 9
+opcode[124].pair_count[137] : 14
+opcode[124].pair_count[142] : 7
+opcode[124].pair_count[143] : 343
+opcode[124].pair_count[144] : 2
+opcode[124].pair_count[145] : 286
+opcode[124].pair_count[153] : 90
+opcode[124].pair_count[154] : 105
+opcode[124].pair_count[155] : 9
+opcode[124].pair_count[160] : 205
+opcode[124].pair_count[162] : 15
+opcode[124].pair_count[164] : 107
+opcode[124].pair_count[166] : 649
+opcode[124].pair_count[168] : 3
+opcode[124].pair_count[169] : 47
+opcode[124].pair_count[172] : 56
+opcode[124].pair_count[175] : 5
+    opcode[125].execution_count : 2038
+opcode[125].pair_count[1] : 2
+opcode[125].pair_count[2] : 91
+opcode[125].pair_count[9] : 181
+opcode[125].pair_count[38] : 13
+opcode[125].pair_count[44] : 29
+opcode[125].pair_count[47] : 21
+opcode[125].pair_count[48] : 116
+opcode[125].pair_count[55] : 271
+opcode[125].pair_count[89] : 40
+opcode[125].pair_count[100] : 158
+opcode[125].pair_count[110] : 419
+opcode[125].pair_count[116] : 213
+opcode[125].pair_count[124] : 382
+opcode[125].pair_count[125] : 50
+opcode[125].pair_count[126] : 2
+opcode[125].pair_count[136] : 1
+opcode[125].pair_count[137] : 41
+opcode[125].pair_count[140] : 8
+    opcode[126].execution_count : 2
+opcode[126].pair_count[100] : 2
+    opcode[127].execution_count : 8
+opcode[127].pair_count[64] : 8
+    opcode[128].execution_count : 753
+opcode[128].pair_count[1] : 40
+opcode[128].pair_count[2] : 2
+opcode[128].pair_count[9] : 83
+opcode[128].pair_count[38] : 12
+opcode[128].pair_count[47] : 12
+opcode[128].pair_count[48] : 6
+opcode[128].pair_count[55] : 118
+opcode[128].pair_count[100] : 54
+opcode[128].pair_count[116] : 67
+opcode[128].pair_count[124] : 359
+    opcode[129].execution_count : 352
+opcode[129].pair_count[2] : 3
+opcode[129].pair_count[9] : 17
+opcode[129].pair_count[38] : 46
+opcode[129].pair_count[47] : 8
+opcode[129].pair_count[48] : 39
+opcode[129].pair_count[55] : 80
+opcode[129].pair_count[100] : 7
+opcode[129].pair_count[110] : 4
+opcode[129].pair_count[116] : 57
+opcode[129].pair_count[124] : 89
+opcode[129].pair_count[140] : 2
+    opcode[130].execution_count : 14
+opcode[130].pair_count[35] : 5
+opcode[130].pair_count[120] : 2
+    opcode[132].execution_count : 930
+opcode[132].pair_count[47] : 1
+opcode[132].pair_count[55] : 23
+opcode[132].pair_count[90] : 484
+opcode[132].pair_count[100] : 86
+opcode[132].pair_count[101] : 2
+opcode[132].pair_count[116] : 9
+opcode[132].pair_count[124] : 182
+opcode[132].pair_count[125] : 49
+opcode[132].pair_count[138] : 1
+opcode[132].pair_count[166] : 93
+    opcode[133].execution_count : 153
+opcode[133].pair_count[17] : 89
+opcode[133].pair_count[25] : 63
+opcode[133].pair_count[60] : 1
+    opcode[135].execution_count : 70
+opcode[135].pair_count[135] : 9
+opcode[135].pair_count[150] : 26
+opcode[135].pair_count[151] : 35
+    opcode[136].execution_count : 104
+opcode[136].pair_count[102] : 82
+opcode[136].pair_count[120] : 5
+opcode[136].pair_count[136] : 17
+    opcode[137].execution_count : 228
+opcode[137].pair_count[39] : 1
+opcode[137].pair_count[41] : 1
+opcode[137].pair_count[44] : 24
+opcode[137].pair_count[45] : 24
+opcode[137].pair_count[46] : 12
+opcode[137].pair_count[47] : 1
+opcode[137].pair_count[55] : 8
+opcode[137].pair_count[56] : 1
+opcode[137].pair_count[59] : 27
+opcode[137].pair_count[68] : 3
+opcode[137].pair_count[83] : 2
+opcode[137].pair_count[100] : 13
+opcode[137].pair_count[102] : 25
+opcode[137].pair_count[106] : 4
+opcode[137].pair_count[114] : 3
+opcode[137].pair_count[116] : 3
+opcode[137].pair_count[124] : 39
+opcode[137].pair_count[125] : 1
+opcode[137].pair_count[160] : 3
+opcode[137].pair_count[162] : 5
+opcode[137].pair_count[166] : 19
+opcode[137].pair_count[176] : 9
+    opcode[138].execution_count : 31
+opcode[138].pair_count[116] : 1
+opcode[138].pair_count[124] : 3
+opcode[138].pair_count[125] : 6
+opcode[138].pair_count[136] : 3
+opcode[138].pair_count[137] : 9
+opcode[138].pair_count[161] : 9
+    opcode[140].execution_count : 109
+opcode[140].pair_count[9] : 1
+opcode[140].pair_count[93] : 106
+opcode[140].pair_count[144] : 2
+    opcode[141].execution_count : 10
+opcode[141].pair_count[124] : 10
+    opcode[142].execution_count : 123
+opcode[142].pair_count[83] : 80
+opcode[142].pair_count[90] : 1
+opcode[142].pair_count[103] : 1
+opcode[142].pair_count[125] : 40
+opcode[142].pair_count[166] : 1
+    opcode[143].execution_count : 1149
+opcode[143].pair_count[22] : 469
+opcode[143].pair_count[23] : 660
+opcode[143].pair_count[24] : 20
+    opcode[144].execution_count : 273
+opcode[144].pair_count[93] : 4
+opcode[144].pair_count[100] : 260
+opcode[144].pair_count[110] : 1
+opcode[144].pair_count[114] : 3
+opcode[144].pair_count[115] : 4
+opcode[144].pair_count[128] : 1
+    opcode[145].execution_count : 626
+opcode[145].pair_count[38] : 609
+opcode[145].pair_count[140] : 17
+    opcode[146].execution_count : 1
+opcode[146].pair_count[140] : 1
+    opcode[147].execution_count : 323
+opcode[147].pair_count[100] : 182
+opcode[147].pair_count[105] : 1
+opcode[147].pair_count[144] : 122
+opcode[147].pair_count[165] : 18
+    opcode[149].execution_count : 131
+opcode[149].pair_count[75] : 57
+opcode[149].pair_count[150] : 34
+opcode[149].pair_count[151] : 40
+    opcode[150].execution_count : 1879
+opcode[150].pair_count[1] : 57
+opcode[150].pair_count[2] : 92
+opcode[150].pair_count[9] : 20
+opcode[150].pair_count[44] : 18
+opcode[150].pair_count[45] : 30
+opcode[150].pair_count[46] : 55
+opcode[150].pair_count[47] : 1
+opcode[150].pair_count[48] : 113
+opcode[150].pair_count[55] : 873
+opcode[150].pair_count[100] : 100
+opcode[150].pair_count[103] : 162
+opcode[150].pair_count[124] : 358
+    opcode[151].execution_count : 872
+opcode[151].pair_count[1] : 10
+opcode[151].pair_count[2] : 32
+opcode[151].pair_count[9] : 27
+opcode[151].pair_count[44] : 1
+opcode[151].pair_count[45] : 2
+opcode[151].pair_count[46] : 3
+opcode[151].pair_count[47] : 30
+opcode[151].pair_count[100] : 85
+opcode[151].pair_count[101] : 87
+opcode[151].pair_count[103] : 21
+opcode[151].pair_count[104] : 1
+opcode[151].pair_count[116] : 281
+opcode[151].pair_count[124] : 282
+opcode[151].pair_count[136] : 7
+opcode[151].pair_count[137] : 3
+    opcode[153].execution_count : 220
+opcode[153].pair_count[38] : 12
+opcode[153].pair_count[110] : 120
+opcode[153].pair_count[124] : 19
+opcode[153].pair_count[153] : 34
+opcode[153].pair_count[154] : 35
+    opcode[154].execution_count : 623
+opcode[154].pair_count[9] : 46
+opcode[154].pair_count[44] : 144
+opcode[154].pair_count[46] : 114
+opcode[154].pair_count[47] : 4
+opcode[154].pair_count[48] : 6
+opcode[154].pair_count[55] : 23
+opcode[154].pair_count[100] : 83
+opcode[154].pair_count[103] : 28
+opcode[154].pair_count[110] : 21
+opcode[154].pair_count[124] : 154
+    opcode[155].execution_count : 26
+opcode[155].pair_count[100] : 14
+opcode[155].pair_count[101] : 1
+opcode[155].pair_count[124] : 4
+opcode[155].pair_count[157] : 7
+    opcode[156].execution_count : 44
+opcode[156].pair_count[83] : 15
+opcode[156].pair_count[100] : 13
+opcode[156].pair_count[125] : 15
+opcode[156].pair_count[165] : 1
+    opcode[157].execution_count : 14
+opcode[157].pair_count[83] : 1
+opcode[157].pair_count[90] : 4
+opcode[157].pair_count[101] : 2
+opcode[157].pair_count[103] : 1
+opcode[157].pair_count[124] : 1
+opcode[157].pair_count[125] : 2
+opcode[157].pair_count[146] : 1
+opcode[157].pair_count[166] : 2
+opcode[160].specializable : 1
+    opcode[160].specialization.success : 64
+    opcode[160].specialization.failure : 26
+    opcode[160].specialization.hit : 1555
+    opcode[160].specialization.deferred : 112
+    opcode[160].specialization.miss : 2
+    opcode[160].execution_count : 583
+    opcode[160].specialization.failure_kinds[1] : 3
+    opcode[160].specialization.failure_kinds[9] : 8
+    opcode[160].specialization.failure_kinds[17] : 5
+    opcode[160].specialization.failure_kinds[18] : 10
+opcode[160].pair_count[2] : 3
+opcode[160].pair_count[35] : 2
+opcode[160].pair_count[100] : 94
+opcode[160].pair_count[101] : 46
+opcode[160].pair_count[103] : 4
+opcode[160].pair_count[116] : 50
+opcode[160].pair_count[124] : 247
+opcode[160].pair_count[136] : 6
+opcode[160].pair_count[137] : 6
+opcode[160].pair_count[166] : 125
+    opcode[161].execution_count : 1397
+opcode[161].pair_count[39] : 11
+opcode[161].pair_count[40] : 24
+opcode[161].pair_count[45] : 8
+opcode[161].pair_count[47] : 6
+opcode[161].pair_count[55] : 94
+opcode[161].pair_count[56] : 25
+opcode[161].pair_count[59] : 103
+opcode[161].pair_count[68] : 85
+opcode[161].pair_count[100] : 349
+opcode[161].pair_count[102] : 21
+opcode[161].pair_count[114] : 51
+opcode[161].pair_count[124] : 62
+opcode[161].pair_count[125] : 11
+opcode[161].pair_count[128] : 147
+opcode[161].pair_count[129] : 24
+opcode[161].pair_count[137] : 22
+opcode[161].pair_count[161] : 25
+opcode[161].pair_count[175] : 329
+    opcode[162].execution_count : 31
+opcode[162].pair_count[82] : 21
+opcode[162].pair_count[90] : 6
+opcode[162].pair_count[166] : 4
+    opcode[164].execution_count : 110
+opcode[164].pair_count[142] : 110
+    opcode[165].execution_count : 19
+opcode[165].pair_count[90] : 1
+opcode[165].pair_count[100] : 1
+opcode[165].pair_count[105] : 17
+opcode[166].specializable : 1
+    opcode[166].specialization.success : 143
+    opcode[166].specialization.failure : 66
+    opcode[166].specialization.hit : 2911
+    opcode[166].specialization.deferred : 721
+    opcode[166].specialization.miss : 110
+    opcode[166].specialization.deopt : 1
+    opcode[166].execution_count : 1950
+    opcode[166].specialization.failure_kinds[0] : 1
+    opcode[166].specialization.failure_kinds[13] : 15
+    opcode[166].specialization.failure_kinds[14] : 5
+    opcode[166].specialization.failure_kinds[16] : 25
+    opcode[166].specialization.failure_kinds[19] : 13
+    opcode[166].specialization.failure_kinds[23] : 6
+    opcode[166].specialization.failure_kinds[24] : 1
+opcode[166].pair_count[22] : 110
+opcode[166].pair_count[171] : 1840
+    opcode[167].execution_count : 159
+opcode[167].pair_count[9] : 109
+opcode[167].pair_count[44] : 4
+opcode[167].pair_count[124] : 23
+opcode[167].pair_count[125] : 23
+    opcode[168].execution_count : 5
+opcode[168].pair_count[169] : 5
+    opcode[169].execution_count : 92
+opcode[169].pair_count[9] : 46
+opcode[169].pair_count[47] : 2
+opcode[169].pair_count[55] : 40
+opcode[169].pair_count[89] : 4
+opcode[171].specializable : 1
+    opcode[171].specialization.success : 51
+    opcode[171].specialization.failure : 225
+    opcode[171].specialization.hit : 615
+    opcode[171].specialization.deferred : 1249
+    opcode[171].specialization.miss : 218
+    opcode[171].specialization.deopt : 2
+    opcode[171].execution_count : 2058
+    opcode[171].specialization.failure_kinds[0] : 2
+    opcode[171].specialization.failure_kinds[9] : 52
+    opcode[171].specialization.failure_kinds[13] : 72
+    opcode[171].specialization.failure_kinds[18] : 16
+    opcode[171].specialization.failure_kinds[19] : 26
+    opcode[171].specialization.failure_kinds[20] : 32
+    opcode[171].specialization.failure_kinds[21] : 10
+    opcode[171].specialization.failure_kinds[25] : 15
+opcode[171].pair_count[1] : 172
+opcode[171].pair_count[35] : 15
+opcode[171].pair_count[53] : 21
+opcode[171].pair_count[68] : 12
+opcode[171].pair_count[75] : 4
+opcode[171].pair_count[83] : 76
+opcode[171].pair_count[86] : 6
+opcode[171].pair_count[90] : 218
+opcode[171].pair_count[92] : 8
+opcode[171].pair_count[99] : 7
+opcode[171].pair_count[100] : 48
+opcode[171].pair_count[102] : 1
+opcode[171].pair_count[106] : 7
+opcode[171].pair_count[107] : 2
+opcode[171].pair_count[112] : 10
+opcode[171].pair_count[114] : 118
+opcode[171].pair_count[115] : 42
+opcode[171].pair_count[116] : 16
+opcode[171].pair_count[118] : 7
+opcode[171].pair_count[120] : 2
+opcode[171].pair_count[122] : 2
+opcode[171].pair_count[124] : 42
+opcode[171].pair_count[125] : 181
+opcode[171].pair_count[128] : 28
+opcode[171].pair_count[130] : 8
+opcode[171].pair_count[135] : 23
+opcode[171].pair_count[138] : 12
+opcode[171].pair_count[144] : 2
+opcode[171].pair_count[145] : 5
+opcode[171].pair_count[149] : 80
+opcode[171].pair_count[150] : 377
+opcode[171].pair_count[151] : 431
+opcode[171].pair_count[160] : 2
+opcode[171].pair_count[164] : 3
+opcode[171].pair_count[166] : 62
+opcode[171].pair_count[175] : 8
+    opcode[172].execution_count : 217
+opcode[172].pair_count[64] : 22
+opcode[172].pair_count[143] : 126
+opcode[172].pair_count[166] : 69
+    opcode[175].execution_count : 351
+opcode[175].pair_count[93] : 9
+opcode[175].pair_count[124] : 342
+    opcode[176].execution_count : 9
+opcode[176].pair_count[100] : 1
+opcode[176].pair_count[116] : 8
+    opcode[177].execution_count : 5
+opcode[177].pair_count[179] : 1
+opcode[177].pair_count[180] : 4
+    opcode[179].execution_count : 23
+opcode[179].pair_count[167] : 23
+    opcode[180].execution_count : 145
+opcode[180].pair_count[138] : 9
+opcode[180].pair_count[167] : 136
+Calls to PyEval_EvalDefault: 864
+Calls to Python functions inlined: 1953
+Frames pushed: 2687
+Frame objects created: 97
+Object allocations from freelist: 4337
+Object frees to freelist: 5801
+Object allocations: 31868
+Object allocations to 512 bytes: 31276
+Object allocations to 4 kbytes: 484
+Object allocations over 4 kbytes: 108
+Object frees: 26715
+Object new values: 202
+Object materialize dict (on request): 0
+Object materialize dict (new key): 0
+Object materialize dict (too big): 0
+Object materialize dict (str subclass): 0
+2023-06-29 12:55:38.909050: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-06-29 12:55:39.498800: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /trinity/shared/apps/tr17.10/x86_64/intel-2020.4/intelpython3/lib64
+2023-06-29 12:55:39.498837: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-06-29 12:55:45.380604: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /trinity/shared/apps/tr17.10/x86_64/intel-2020.4/intelpython3/lib64
+2023-06-29 12:55:45.380774: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /trinity/shared/apps/tr17.10/x86_64/intel-2020.4/intelpython3/lib64
+2023-06-29 12:55:45.380791: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+Traceback (most recent call last):
+  File "digits_recognition_cnn.py", line 3, in <module>
+    import matplotlib.pyplot as plt
+  File "/trinity/shared/apps/tr17.10/x86_64/intel-2020.4/intelpython3/lib/python3.7/site-packages/matplotlib/__init__.py", line 205, in <module>
+    _check_versions()
+  File "/trinity/shared/apps/tr17.10/x86_64/intel-2020.4/intelpython3/lib/python3.7/site-packages/matplotlib/__init__.py", line 190, in _check_versions
+    from . import ft2font
+ImportError: /lib64/libstdc++.so.6: version `CXXABI_1.3.9' not found (required by /trinity/shared/apps/tr17.10/x86_64/intel-2020.4/intelpython3/lib/python3.7/site-packages/matplotlib/ft2font.cpython-37m-x86_64-linux-gnu.so)
+2023-06-29 13:04:55.772649: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-06-29 13:04:59.223310: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libcudart.so.11.0'; dlerror: libcudart.so.11.0: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /trinity/shared/apps/tr17.10/x86_64/intel-2020.4/intelpython3/lib64
+2023-06-29 13:04:59.223343: I tensorflow/compiler/xla/stream_executor/cuda/cudart_stub.cc:29] Ignore above cudart dlerror if you do not have a GPU set up on your machine.
+2023-06-29 13:05:01.781271: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /trinity/shared/apps/tr17.10/x86_64/intel-2020.4/intelpython3/lib64
+2023-06-29 13:05:01.781447: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /trinity/shared/apps/tr17.10/x86_64/intel-2020.4/intelpython3/lib64
+2023-06-29 13:05:01.781463: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+/trinity/shared/apps/tr17.10/x86_64/intel-2020.4/intelpython3/lib/python3.7/site-packages/requests/__init__.py:91: RequestsDependencyWarning: urllib3 (1.26.16) or chardet (3.0.4) doesn't match a supported version!
+  RequestsDependencyWarning)
+Traceback (most recent call last):
+  File "digits_recognition_cnn.py", line 3, in <module>
+    import matplotlib.pyplot as plt
+  File "/trinity/shared/apps/tr17.10/x86_64/intel-2020.4/intelpython3/lib/python3.7/site-packages/matplotlib/__init__.py", line 205, in <module>
+    _check_versions()
+  File "/trinity/shared/apps/tr17.10/x86_64/intel-2020.4/intelpython3/lib/python3.7/site-packages/matplotlib/__init__.py", line 190, in _check_versions
+    from . import ft2font
+ImportError: /lib64/libstdc++.so.6: version `CXXABI_1.3.9' not found (required by /trinity/shared/apps/tr17.10/x86_64/intel-2020.4/intelpython3/lib/python3.7/site-packages/matplotlib/ft2font.cpython-37m-x86_64-linux-gnu.so)
+2023-06-29 14:19:16.677831: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-06-29 14:19:23.731482: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /trinity/shared/apps/tr17.10/x86_64/cuda-11.6/lib64:/trinity/shared/apps/tr17.10/x86_64/cuda-11.6/lib64/stubs:/trinity/shared/apps/tr17.10/x86_64/intel-2020.4/intelpython3/lib64
+2023-06-29 14:19:23.731908: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory; LD_LIBRARY_PATH: /trinity/shared/apps/tr17.10/x86_64/cuda-11.6/lib64:/trinity/shared/apps/tr17.10/x86_64/cuda-11.6/lib64/stubs:/trinity/shared/apps/tr17.10/x86_64/intel-2020.4/intelpython3/lib64
+2023-06-29 14:19:23.731924: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+/trinity/shared/apps/tr17.10/x86_64/intel-2020.4/intelpython3/lib/python3.7/site-packages/requests/__init__.py:91: RequestsDependencyWarning: urllib3 (1.26.16) or chardet (3.0.4) doesn't match a supported version!
+  RequestsDependencyWarning)
+Traceback (most recent call last):
+  File "digits_recognition_cnn.py", line 3, in <module>
+    import matplotlib.pyplot as plt
+  File "/trinity/shared/apps/tr17.10/x86_64/intel-2020.4/intelpython3/lib/python3.7/site-packages/matplotlib/__init__.py", line 205, in <module>
+    _check_versions()
+  File "/trinity/shared/apps/tr17.10/x86_64/intel-2020.4/intelpython3/lib/python3.7/site-packages/matplotlib/__init__.py", line 190, in _check_versions
+    from . import ft2font
+ImportError: /lib64/libstdc++.so.6: version `CXXABI_1.3.9' not found (required by /trinity/shared/apps/tr17.10/x86_64/intel-2020.4/intelpython3/lib/python3.7/site-packages/matplotlib/ft2font.cpython-37m-x86_64-linux-gnu.so)
