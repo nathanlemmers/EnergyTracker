@@ -8,10 +8,9 @@ import psutil
 import pynvml
 
 import eco2ai
-from carbontracker.tracker import CarbonTracker
+#from carbontracker.tracker import CarbonTracker
 import os
 import cpuinfo
-import re
 import subprocess
 import sys
 from datetime import datetime
@@ -138,7 +137,7 @@ class Monitor(Thread):
                     self.carbon += self.get_value_for_data("France")*48
                     self.carboncount += 48 
             time.sleep(self.delay)
-        
+
 
     def stop(self):
         #On stoppe tous les trackers
@@ -208,44 +207,6 @@ class Monitor(Thread):
         else :
             return False
         
-        
-
-
-      
-#FROM CodeCarbon ! But I changed the cpu count because we need the physical one, not the logicals.
-    def count_cpus(self) -> int:
-        if os.environ.get("SLURM_JOB_ID") is None:
-            return psutil.cpu_count(logical=False)
-
-        try:
-            scontrol = subprocess.check_output(
-                ["scontrol show job $SLURM_JOBID"], shell=True
-            ).decode()
-        except subprocess.CalledProcessError:
-            logger.warning(
-                "Error running `scontrol show job $SLURM_JOBID` "
-                + "to count SLURM-available cpus. Using the machine's cpu count."
-            )
-            return psutil.cpu_count(logical=False)
-
-        num_cpus_matches = re.findall(r"NumCPUs=\d+", scontrol)
-
-        if len(num_cpus_matches) == 0:
-            logger.warning(
-                "Could not find NumCPUs= after running `scontrol show job $SLURM_JOBID` "
-                + "to count SLURM-available cpus. Using the machine's cpu count."
-            )
-            return psutil.cpu_count(logical=False)
-
-        if len(num_cpus_matches) > 1:
-            logger.warning(
-                "Unexpected output after running `scontrol show job $SLURM_JOBID` "
-                + "to count SLURM-available cpus. Using the machine's cpu count."
-            )
-            return psutil.cpu_count(logical=False)
-
-        num_cpus = num_cpus_matches[0].replace("NumCPUs=", "")
-        return int(num_cpus)
     
     def fichier_total(self):
 
