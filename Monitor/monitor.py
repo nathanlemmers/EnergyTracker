@@ -21,7 +21,7 @@ warnings.filterwarnings("ignore")
 
 
 class Monitor(Thread):
-    global total_cpu, count, cpu_now, total_gpu, gpu_now,  tracker_codecarbon, tracker_eco2ai, tracker_carbontracker, total_time, start_time, total_ram,num_gpus, pid, dossier, carbon, carboncount, new_time, pue, GPU_power_info, total_gpu_pynvml
+    global total_cpu, count, cpu_now, total_gpu, gpu_now,  tracker_codecarbon, tracker_eco2ai, tracker_carbontracker, total_time, start_time, total_ram,num_gpus, pid, dossier, carbon, carboncount, new_time, pue, GPU_power_info
 
     def __init__(self, delay, pue):
         
@@ -38,7 +38,6 @@ class Monitor(Thread):
         self.total_cpu = 0
         self.count = 0 
         self.total_gpu = 0
-        self.total_gpu_pynvml = 0
         self.GPU_power_info = 0
         self.total_ram = 0
         self.carboncount = 0
@@ -118,7 +117,6 @@ class Monitor(Thread):
                 pass
             gpu_now = self.nvidia_smi(current_user)
             self.GPU_power_info += gpu_mwatt
-            self.total_gpu_pynvml += self.gpu_now_pynvml
             self.total_gpu += gpu_now
             #Pareil, mais usage factor du CPU
             user_processes = [p.info for p in psutil.process_iter(['pid', 'username', 'cpu_percent']) if p.info['username'] == current_user]
@@ -167,14 +165,9 @@ class Monitor(Thread):
         if (self.count!=0):     
             average_ram = self.total_ram/self.count
             cpu_usage = self.total_cpu/self.count/100
-            gpu_usage_pynvml = self.total_gpu_pynvml/self.count/100
             gpu_usage = self.total_gpu/self.count/100
             gpu_mwatt = self.GPU_power_info/self.count
-            if gpu_usage_pynvml ==0 :
-                ratio_gpu = 0
-            else : 
-                ratio_gpu = gpu_usage/gpu_usage_pynvml
-            GA = self.GreenAlgo_adapted(self.total_time, cpu_name, nb_cpu, average_ram, cpu_usage, gpu_mwatt, ratio_gpu)
+            GA = self.GreenAlgo_adapted(self.total_time, cpu_name, nb_cpu, average_ram, cpu_usage, gpu_mwatt)
             
             fichier = open("co2/"+self.dossier+"/GreenAlgorithm_emissions.txt", "w")
             if GA is not None :
@@ -262,7 +255,7 @@ class Monitor(Thread):
         # Enregistrer le résultat dans le fichier "total.csv"
         df_total.to_csv(chemin_fichier_total, index=False)
 
-    def GreenAlgo_adapted(self, time_code, cpu_name , number_core_code, ram_moyenne, CPU_usage, GPU_mwatt, ratio_GPU) :
+    def GreenAlgo_adapted(self, time_code, cpu_name , number_core_code, ram_moyenne, CPU_usage, GPU_mwatt) :
         runTime=time_code
         numberCPUs=number_core_code
         CPUpower = self.get_value_for_data(cpu_name)
@@ -273,7 +266,7 @@ class Monitor(Thread):
             PSF=1
             PUE_used = self.pue
             powerNeeded_CPU = PUE_used * numberCPUs * CPUpower * usageCPU
-            powerNeeded_GPU = PUE_used * GPU_mwatt * ratio_GPU / 1000
+            powerNeeded_GPU = PUE_used * GPU_mwatt / 1000
             """if (powerNeeded_GPU==0) :
                 print("GPU utilisation : 0%")"""
             powerNeeded_core = powerNeeded_CPU + powerNeeded_GPU
