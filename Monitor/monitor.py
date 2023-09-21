@@ -13,7 +13,7 @@ import os
 import cpuinfo
 import subprocess
 import sys
-from datetime import datetime
+from datetime import datetime, timedelta
 import pandas as pd
 import FR
 import warnings
@@ -24,7 +24,6 @@ class Monitor(Thread):
     global total_cpu, count, cpu_now, total_gpu, gpu_now,  tracker_codecarbon, tracker_eco2ai, tracker_carbontracker, total_time, start_time, total_ram,num_gpus, pid, dossier, carbon, carboncount, new_time, pue, GPU_power_info
 
     def __init__(self, delay, pue):
-        
         self.pue = pue
         super(Monitor, self).__init__()
         #Création du dossier co2 pour ranger les données, un sous dossier ave la date sera fait ensuite.
@@ -33,7 +32,7 @@ class Monitor(Thread):
             os.mkdir(rep)
         #Variable pour continuer le while du run.
         self.stopped = False
-        #delay pour faire les mesures, dans l'executable il est de 10s, si on augmente on risque de consommer plus, et si on diminue, on aura des mesures d'usage factor peu fiable (donc si on n'utilise pas GreenAlgorithm, on peut augmenter en théorie)
+        #delay pour faire les mesures, dans l'executable il est de 10s, si on augmente on risque de consommer plus, et si on diminue, on aura des mesures d'usage factor peu fiable
         self.delay = delay 
         self.total_cpu = 0
         self.count = 0 
@@ -47,14 +46,14 @@ class Monitor(Thread):
         self.dossier = self.new_time.strftime("%Y.%m.%d_%H:%M:%S")
         if (not(os.path.exists("co2/"+self.dossier))):
             os.mkdir("co2/"+self.dossier)
-        #Lancement de CodeCarbon
+        #Initialisation de CodeCarbon
         from codecarbon import EmissionsTracker
         self.tracker_codecarbon = EmissionsTracker(output_dir='co2/'+self.dossier, output_file='codecarbon_emissions.csv', tracking_mode = 'process')
         
-        #Lancement de eco2ai
+        #Initialisation de eco2ai
         self.tracker_eco2ai = eco2ai.Tracker(project_name="My_default_project_name", experiment_description="We trained...", file_name="co2/"+self.dossier+"/eco2ai_emissions.csv")
         
-        #Lancement de CarbonTracker 
+        #Initialisation de CarbonTracker 
         #self.tracker_carbontracker = CarbonTracker(epochs=1, log_dir="co2/"+self.dossier, log_file_prefix="carbontracker_emissions")
         
 
@@ -64,6 +63,7 @@ class Monitor(Thread):
             self.num_gpus = pynvml.nvmlDeviceGetCount()
             self.gpu_ref = []
             for i in range(self.num_gpus) :
+                #Tableau de référence pour la consommation passive de nos GPUs
                 self.gpu_ref.append(pynvml.nvmlDeviceGetPowerUsage(pynvml.nvmlDeviceGetHandleByIndex(i)))
 
         except pynvml.NVMLError_FunctionNotFound:
@@ -73,8 +73,9 @@ class Monitor(Thread):
             # Une autre erreur liée à pynvml s'est produite
             self.num_gpus = 0
         self.start_time = time.time()
+
+        #Lancement des modules externes
         self.tracker_codecarbon.start()
-        
         self.tracker_eco2ai.start()
         #self.tracker_carbontracker.epoch_start()
         self.pid = os.getpid()
@@ -82,10 +83,12 @@ class Monitor(Thread):
         self.start()
 
     def run(self):
-        time.sleep(10)
+        #Premier delay pour attendre le lancement du code principal
+        time.sleep(self.delay)
         current_user = psutil.Process().username()
         while not self.stopped:
-            #Ici, on cherche l'usage factor du GPU. Donc on lance prend la mesure toutes les 10s et on prendra ensuite la moyenne.
+            loop = time.time()
+            #Ici, on cherche la consommation du GPU pour GA dapated. Donc on lance prend la mesure toutes les delay et on prendra ensuite la moyenne.
             self.gpu_now_pynvml = 0
             gpu_now = 0
             gpu_mwatt = 0
@@ -115,26 +118,29 @@ class Monitor(Thread):
             except pynvml.NVMLError as e:
                 # Une autre erreur liée à pynvml s'est produite
                 pass
+            #nvidia-smi donne l'usage factor de nos GPUs lié à notre user seulement
             gpu_now = self.nvidia_smi(current_user)
             self.GPU_power_info += gpu_mwatt
             self.total_gpu += gpu_now
-            #Pareil, mais usage factor du CPU
+            #On mesure l'usage factor du CPU lié seulement à notre user courant
             user_processes = [p.info for p in psutil.process_iter(['pid', 'username', 'cpu_percent']) if p.info['username'] == current_user]
             cpu_total = sum(p['cpu_percent'] for p in user_processes)
             cpu_cores = psutil.cpu_count(logical=False)
             cpu_usage = cpu_total / cpu_cores if cpu_cores > 0 else 0
             self.total_cpu += cpu_usage
+            #On mesure la ram moyenne utilisé par notre user
             user_processes = [p for p in psutil.process_iter(['pid', 'username']) if p.info['username'] == current_user]
             self.total_ram += sum(p.memory_info().rss / (1024 ** 3) for p in user_processes)
             self.count += 1
-            if (self.count%(23.5*3600/self.delay)==0):
+            #Cette boucle permet la mesure moyenne de l'intensité carbone si on depasse une journée de travail
+            if (self.new_time-datetime.now()>timedelta(hours=23.5)):
                 try :
                     self.new_time = datetime.now()
                     self.carbonIntensity_day(self.new_time)
                 except Exception :
                     self.carbon += self.get_value_for_data("France")*48
                     self.carboncount += 48 
-            time.sleep(self.delay)
+            time.sleep(self.delay-(time.time()-loop))
 
 
     def stop(self):
@@ -149,7 +155,7 @@ class Monitor(Thread):
         #En minutes
         cpu_name =cpuinfo.get_cpu_info()['brand_raw']
         nb_cpu = psutil.cpu_count(logical=False)
-        gpu_name = "No NVIDIA graphuc card found"
+        gpu_name = "No NVIDIA graphic card found"
         try :
             for i in range(self.num_gpus):
                 gpu_handle = pynvml.nvmlDeviceGetHandleByIndex(i)
@@ -175,7 +181,7 @@ class Monitor(Thread):
                 fichier.write("Stats :\n{} g de co2.\n{} kWh\n".format(GA[0], GA[1]))
                 self.fichier_total_GA(GA[0], GA[1])
             else :
-                #On écrit les output à mettre à la main dans GreenAlgorithm ici. C'est la mesure la plus précise que l'on puisse avoir.
+                #On écrit les output à mettre à la main dans GreenAlgorithm ici. 
                 fichier.write("If you want more precise and efficient stats, enter your data in the csv file.")
                 fichier.write("Stats for GreenAlgorithm: http://calculator.green-algorithms.org/\n")
                 fichier.write("Run time: {} minutes\n".format(self.total_time))
@@ -282,7 +288,7 @@ class Monitor(Thread):
                 print("La clé API ne fonctionne pas, valeur par défaut générée. Si vous voulez un résultat précis, générez une clée sur https://opendata.reseaux-energies.fr/, et définissez la pour RESEAUX_ENERGIES_TOKEN")
             return [carbonEmissions, energyNeeded]
         return None
-
+    #Donne les valeurs que l'on recherche dans data_GA
     def get_value_for_data(self, target_data):
         df = pd.read_csv("Monitor/data_GA.csv")
         row = df[df['data'] == target_data]
@@ -293,6 +299,7 @@ class Monitor(Thread):
     def changepid(self, pid):
         self.pid=pid
 
+    #Donne l'intensité carbone moyenne de la dernière journée
     def carbonIntensity_day(self, dateti):
         try :
             if (dateti.minute<30) :
@@ -315,6 +322,7 @@ class Monitor(Thread):
             #print("La clé API ne fonctionne pas, valeur par défaut générée. Si vous voulez un résultat précis, générez une clée sur https://opendata.reseaux-energies.fr/, et définissez la pour RESEAUX_ENERGIES_TOKEN")
             return self.get_value_for_data("France")
     
+    #Donne l'intensité carbone à partir de la date en argument
     def carbonIntensity_date(self, dateti):
         try :
             if (dateti.minute<30) :
@@ -339,6 +347,8 @@ class Monitor(Thread):
             #print("La clé API ne fonctionne pas, valeur par défaut générée. Si vous voulez un résultat précis, générez une clée sur https://opendata.reseaux-energies.fr/, et définissez la pour RESEAUX_ENERGIES_TOKEN")
             return self.get_value_for_data("France")
 
+
+    #Donne l'usage factor du GPU lié à l'user en argument
     def nvidia_smi(self, username):
         try:
             usage = 0
@@ -367,7 +377,7 @@ class Monitor(Thread):
 
 
 
-#Pour lancer la commande linux
+#Pour lsancer la commande linux
 def linux_command(command, monitor):
 	
 	result = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE) 
@@ -384,15 +394,19 @@ def linux_command(command, monitor):
 
 #En cas d'utilisation en executable :
 if __name__ == "__main__":
+    freq=10
     pue = 1.67
     if len(sys.argv) < 2:
         print("Linux command is missing")
         sys.exit(1)
     for i in sys.argv:
         if (i.startswith("pue=")) :
-            pue = sys.argv[2].split('=')[1]
+            pue = i.split('=')[1]
             pue = float(pue.replace(',', '.'))
-    monitor = Monitor(10, pue)
+        if (i.startswith("freq=")) :
+            freq = i.split('=')[1]
+            freq = float(freq.replace(',', '.'))
+    monitor = Monitor(freq, pue)
     print("Start measuring...")
     linux_command(sys.argv[1], monitor)
     b = monitor.stop()
