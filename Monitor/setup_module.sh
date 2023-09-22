@@ -10,8 +10,6 @@ module load intelpython3/3.7
 fi
 
 
-export RESEAUX_ENERGIES_TOKEN=e71b170247e3ff850045d94ab2647cecf6e62007ef3f367989b5e5f2
-
 
 if python3 -c "import GPUtil" &> /dev/null; then
     echo "GPUtil est déjà installé."
