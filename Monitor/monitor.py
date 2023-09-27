@@ -177,7 +177,6 @@ class Monitor(Thread):
             
             fichier = open("co2/"+self.dossier+"/GreenAlgorithm_emissions.txt", "w")
             if GA is not None :
-                fichier.write("This file is the most precise\n")
                 fichier.write("Stats :\n{} g de co2.\n{} kWh\n".format(GA[0], GA[1]))
                 self.fichier_total_GA(GA[0], GA[1])
             else :
